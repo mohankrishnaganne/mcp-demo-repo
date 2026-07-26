@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="portfolio-generated-at" content="2026-07-26T21:59:38.288939">
+<meta name="portfolio-generated-at" content="2026-07-26T22:01:19.483745">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Resume to Portfolio Converter">
-    <meta name="timestamp" content="2026-07-26T21:59:38.288939">
-    <title>John W. Smith - Portfolio</title>
+    <meta name="generator-timestamp" content="2026-07-26T22:01:19.483745">
+    <title>Sampath Kumar Muthyalapati - Portfolio</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
+            padding: 20px;
             background-color: #f4f7f6;
             color: #333;
         }
@@ -24,170 +23,254 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
-        header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #e0e0e0;
-            margin-bottom: 30px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.8em;
+        h1, h2, h3 {
             color: #2c3e50;
-            font-weight: 700;
+            margin-top: 0;
         }
-        header p {
-            margin: 5px 0;
-            font-size: 1.1em;
-            color: #555;
-        }
-        section {
-            margin-bottom: 30px;
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
         }
         h2 {
-            color: #2c3e50;
-            font-size: 1.8em;
             border-bottom: 2px solid #e0e0e0;
             padding-bottom: 10px;
-            margin-bottom: 20px;
-            font-weight: 600;
+            margin-top: 30px;
+            font-size: 1.8em;
         }
         h3 {
-            color: #34495e;
             font-size: 1.3em;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        ul {
-            list-style: disc;
-            padding-left: 25px;
-            margin: 10px 0;
-        }
-        ul li {
-            margin-bottom: 8px;
-            color: #444;
-        }
-        .experience-item, .education-item {
-            margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 3px solid #3498db;
-        }
-        .experience-item h3, .education-item h3 {
-            margin-top: 0;
             margin-bottom: 5px;
-            color: #3498db;
         }
-        .experience-item p, .education-item p {
-            margin: 0;
+        .header-contact {
+            text-align: center;
+            margin-bottom: 30px;
             font-size: 0.95em;
-            color: #666;
+            color: #555;
+        }
+        .header-contact a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+        .header-contact a:hover {
+            text-decoration: underline;
+        }
+        .section {
+            margin-bottom: 25px;
+        }
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .section ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        .section ul li:before {
+            content: '•';
+            color: #007bff;
+            position: absolute;
+            left: 0;
         }
         .skills-list {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            list-style: none;
-            padding: 0;
+            margin-top: 10px;
         }
-        .skills-list li {
-            background-color: #ecf0f1;
-            color: #2c3e50;
-            padding: 8px 15px;
-            border-radius: 5px;
+        .skill-category {
+            flex: 1 1 45%; /* Allows two columns on wider screens */
+            min-width: 250px; /* Minimum width before wrapping */
+        }
+        .skill-category h4 {
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+        .skill-category span {
+            display: inline-block;
+            background-color: #e9f5ff;
+            color: #007bff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            margin-right: 5px;
+            margin-bottom: 5px;
             font-size: 0.9em;
-            font-weight: 500;
         }
-        footer {
-            text-align: center;
-            padding-top: 20px;
-            margin-top: 30px;
-            border-top: 2px solid #e0e0e0;
+        .experience-item, .project-item, .education-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fdfdfd;
+            border-left: 4px solid #007bff;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        .experience-item h3, .project-item h3, .education-item h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .experience-item p, .project-item p, .education-item p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .project-item .technologies {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 10px;
+        }
+        .project-item a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-item a:hover {
+            text-decoration: underline;
+        }
+        .date-range {
+            float: right;
             color: #777;
             font-size: 0.9em;
+        }
+        .clear {
+            clear: both;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>John W. Smith</h1>
-            <p>2002 Front Range Way Fort Collins, CO 80525 | jwsmith@colostate.edu</p>
+            <h1>Sampath Kumar Muthyalapati</h1>
+            <div class="header-contact">
+                Erragadda, Vikaspuri colony, Telangana, 500018 | 9392457013 | <a href="mailto:sampathkumarmuthyalapati@gmail.com">sampathkumarmuthyalapati@gmail.com</a><br>
+                <a href="https://www.linkedin.com/in/sampath-kumar-muthyalapati/" target="_blank">LinkedIn</a> | <a href="https://github.com/sampath7013" target="_blank">GitHub</a>
+            </div>
         </header>
 
-        <section id="summary">
-            <h2>Career Summary</h2>
-            <p>Four years experience in early childhood development with a diverse background in the care of special needs children and adults.</p>
-        </section>
-
-        <section id="experience">
-            <h2>Professional Experience</h2>
-
-            <div class="experience-item">
-                <h3>Counseling Supervisor</h3>
-                <p>The Wesley Center, Little Rock, Arkansas | 1999-2002</p>
-                <ul>
-                    <li>Coordinated service assignments for 20 part-time counselors and 100 client families.</li>
-                    <li>Oversaw daily activity and outing planning for 100 clients.</li>
-                    <li>Assisted families of special needs clients with researching financial assistance and healthcare.</li>
-                    <li>Assisted teachers with managing daily classroom activities.</li>
-                    <li>Oversaw daily and special student activities.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Client Specialist</h3>
-                <p>Rainbow Special Care Center, Little Rock, Arkansas | 1997-1999</p>
-                <ul>
-                    <li>Determined work placement for 150 special needs adult clients.</li>
-                    <li>Maintained client databases and records.</li>
-                    <li>Coordinated client contact with local health care professionals on a monthly basis.</li>
-                    <li>Managed 25 volunteer workers.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Teacher’s Assistant</h3>
-                <p>Cowell Elementary, Conway, Arkansas | 1996-1997</p>
-                <ul>
-                    <li>Assisted teachers with managing daily classroom activities.</li>
-                    <li>Oversaw daily and special student activities.</li>
-                </ul>
+        <section class="section">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill-category">
+                    <h4>Frontend</h4>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Bootstrap</span>
+                    <span>JavaScript</span>
+                    <span>React.js</span>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend</h4>
+                    <span>Python</span>
+                    <span>Express</span>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <span>SQLite</span>
+                </div>
             </div>
         </section>
 
-        <section id="education">
+        <section class="section">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Nxtwave (Teaching Assistant)</h3>
+                <span class="date-range">Jun 2025 - Ongoing</span>
+                <p>Hyderabad, Telangana</p>
+                <ul>
+                    <li>Clarified student doubts daily across various concepts including HTML, CSS, JavaScript, React.js, Node.js, Express.js, SQL, and Python.</li>
+                    <li>Supported students in understanding and implementing full-stack web development principles.</li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3>Tourism Website</h3>
+                <p><a href="http://tourismmsk.ccbp.tech" target="_blank">tourismmsk.ccbp.tech</a></p>
+                <p>Built a captivating online resource where users can access multimedia content and insightful details about popular travel spots.</p>
+                <ul>
+                    <li>Constructed a mobile-adaptive layout using a combination of HTML elements and CSS3 properties like background, flex, and CSS box model attributes.</li>
+                    <li>Integrated destination-specific image carousels and immersive virtual tour videos with Bootstrap components.</li>
+                </ul>
+                <p class="technologies">Technologies used: HTML, CSS, Bootstrap</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Food Munch</h3>
+                <p><a href="http://mskfoodmunch.ccbp.tech" target="_blank">mskfoodmunch.ccbp.tech</a></p>
+                <p>Discover the world of food with this responsive website that showcases a comprehensive list of food items.</p>
+                <ul>
+                    <li>Designed with a user-centric approach, this website features HTML structure elements and Bootstrap components to ensure a seamless experience.</li>
+                    <li>Provided a closer look at food items with product videos, available at the click of a button.</li>
+                </ul>
+                <p class="technologies">Technologies used: HTML, CSS, Bootstrap</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Todos Application</h3>
+                <p><a href="http://msktodoapp.ccbp.tech" target="_blank">msktodoapp.ccbp.tech</a></p>
+                <p>A task management solution, designed to make life easier.</p>
+                <ul>
+                    <li>Streamlined task management through a combination of HTML, CSS, and Bootstrap for an intuitive interface.</li>
+                    <li>Enabled seamless CRUD operations through JavaScript event listeners and dynamic UI updates.</li>
+                    <li>Ensured secure task persistence with local storage methods, making tasks always available.</li>
+                </ul>
+                <p class="technologies">Technologies used: HTML, CSS, JS, Bootstrap</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Suby app (Swiggy clone)</h3>
+                <p><a href="https://swiggy-clone-react-mu.vercel.app" target="_blank">swiggy-clone-react-mu.vercel.app</a></p>
+                <p>A food ordering and delivery app developed using HTML, CSS, ReactJS, NodeJs, ExpressJs, MongoDB.</p>
+                <ul>
+                    <li>Enabled multiple vendors to log in to a dashboard and add firm details like products, prices, offers, images, description, place, and city.</li>
+                    <li>Allowed customers to view items and place orders based on prices and offers.</li>
+                </ul>
+                <p class="technologies">Technologies used: HTML, CSS, JavaScript, React.js, Node.js</p>
+            </div>
+        </section>
+
+        <section class="section">
             <h2>Education</h2>
             <div class="education-item">
-                <h3>University of Arkansas at Little Rock, Little Rock, AR</h3>
-                <ul>
-                    <li>BS in Early Childhood Development (1999) - GPA: 3.8</li>
-                    <li>BA in Elementary Education (1998) - GPA: 3.5</li>
-                    <li>Overall GPA: 3.4</li>
-                    <li>Dean’s List, Chancellor’s List</li>
-                </ul>
+                <h3>Wichita State University, Wichita</h3>
+                <span class="date-range">2024 - 2026</span>
+                <p>M Tech (Master of Technology) - Computer Science Engineering (CSE)</p>
+                <p>CGPA: 3.9</p>
+                <div class="clear"></div>
+            </div>
+            <div class="education-item">
+                <h3>Vasireddy Venkatadri Institute of Technology, Guntur</h3>
+                <span class="date-range">2020 - 2024</span>
+                <p>B Tech (Bachelor of Technology) - Computer Science Engineering (CSE)</p>
+                <p>CGPA: 7.83</p>
+                <div class="clear"></div>
+            </div>
+            <div class="education-item">
+                <h3>Nxtwave Disruptive Technologies</h3>
+                <span class="date-range">Jun 2022 - Ongoing</span>
+                <p>Industry Ready Certification in Full-stack Development</p>
+                <div class="clear"></div>
+            </div>
+            <div class="education-item">
+                <h3>Narayana Junior College, Vijayawada</h3>
+                <span class="date-range">2018 - 2020</span>
+                <p>Intermediate - MPC</p>
+                <p>CGPA: 9.88</p>
+                <div class="clear"></div>
+            </div>
+            <div class="education-item">
+                <h3>Alpha High School, Cumbum</h3>
+                <span class="date-range">2017 - 2018</span>
+                <p>Secondary School Of Certificate</p>
+                <p>CGPA: 10.0</p>
+                <div class="clear"></div>
             </div>
         </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skills-list">
-                <li>Client Management</li>
-                <li>Record Keeping</li>
-                <li>Coordination & Logistics</li>
-                <li>Team Leadership</li>
-                <li>Volunteer Management</li>
-                <li>Activity Planning</li>
-                <li>Client Support</li>
-                <li>Research</li>
-                <li>Classroom Support</li>
-                <li>Operations Management</li>
-            </ul>
-        </section>
-
-        <footer>
-            <p>&copy; 2026 John W. Smith. All rights reserved.</p>
-        </footer>
     </div>
 </body>
 </html>
