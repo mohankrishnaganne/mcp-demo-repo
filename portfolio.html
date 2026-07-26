@@ -1,178 +1,339 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="portfolio-generated-at" content="2026-07-26T20:53:11.105352">
+<meta name="portfolio-generated-at" content="2026-07-26T21:05:39.116330">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="John W. Smith's Professional Portfolio">
-    <meta name="generator" content="Resume to HTML Portfolio Converter">
-    <meta name="timestamp" content="2026-07-26T20:53:11.105352">
-    <title>John W. Smith - Portfolio</title>
+    <meta name="description" content="Mohan Krishna Ganne's Professional Portfolio - AI/ML Engineer with expertise in Data Engineering, Data Analytics, ETL, and Visualization.">
+    <meta name="keywords" content="AI/ML Engineer, Data Engineering, Data Analytics, ETL, Visualization, AWS, Spark, Kafka, Airflow, Databricks, Snowflake, dbt, Python, Machine Learning, Generative AI, LLMs">
+    <meta name="author" content="Mohan Krishna Ganne">
+    <meta name="generator" content="Portfolio Builder - 2026-07-26T21:05:39.116330">
+    <title>Mohan Krishna Ganne - AI/ML Engineer Portfolio</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --border-color: #ecf0f1;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px;
-            background-color: #f4f7f6;
-            color: #333;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .container {
-            max-width: 900px;
+            width: 90%;
+            max-width: 1000px;
             margin: 20px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
+            padding: 20px;
+            background-color: var(--card-bg);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-        h1 {
+        header {
             text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #34495e;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--border-color);
+            margin-bottom: 20px;
         }
-        h2 {
-            font-size: 1.8em;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 8px;
-            margin-top: 30px;
+        header h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
         }
-        h3 {
-            font-size: 1.4em;
-            margin-bottom: 10px;
-            color: #34495e;
-        }
-        .contact-info {
-            text-align: center;
-            margin-bottom: 30px;
+        header p {
+            margin: 5px 0;
             font-size: 1.1em;
             color: #555;
         }
-        .contact-info a {
-            color: #3498db;
+        header a {
+            color: var(--secondary-color);
             text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
         }
-        .contact-info a:hover {
-            text-decoration: underline;
+        header a:hover {
+            color: var(--accent-color);
         }
-        .section {
+        section {
+            margin-bottom: 30px;
+            padding: 15px 0;
+        }
+        section h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+            font-weight: 600;
+        }
+        .summary p {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+        .skill-category h3 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        .skill-category ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skill-category ul li {
+            background-color: var(--bg-color);
+            padding: 8px 12px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            font-size: 0.95em;
+        }
+        .experience-item, .project-item {
             margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border-color);
         }
-        .section ul {
-            list-style-type: disc;
-            padding-left: 25px;
-            margin-top: 10px;
+        .experience-item:last-child, .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
-        .section ul li {
-            margin-bottom: 8px;
+        .experience-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
         }
-        .job-title {
-            font-weight: bold;
-            color: #34495e;
+        .experience-header h3, .project-header h3 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.4em;
         }
-        .company-name {
+        .experience-header span, .project-header span {
             font-style: italic;
-            color: #666;
-        }
-        .date-range {
-            float: right;
             color: #777;
+            font-size: 0.95em;
         }
-        .clear-fix::after {
-            content: "";
-            display: table;
-            clear: both;
+        .experience-item h4, .project-item h4 {
+            margin: 5px 0 10px 0;
+            color: var(--secondary-color);
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+        .experience-item ul, .project-item ul {
+            list-style: disc;
+            margin: 0 0 0 20px;
+            padding: 0;
+        }
+        .experience-item ul li, .project-item ul li {
+            margin-bottom: 8px;
+            font-size: 1em;
         }
         .education-item {
             margin-bottom: 15px;
         }
-        .education-item ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-top: 5px;
+        .education-item h3 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.4em;
         }
-        .education-item ul li {
-            margin-bottom: 5px;
+        .education-item p {
+            margin: 5px 0;
+            color: #555;
         }
-        .highlight {
-            background-color: #eaf2f8; /* Light blue background for emphasis */
-            padding: 2px 4px;
-            border-radius: 3px;
-            font-weight: bold;
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            font-size: 0.9em;
+            border-top: 1px solid var(--border-color);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>John W. Smith</h1>
-            <div class="contact-info">
-                2002 Front Range Way Fort Collins, CO 80525 | <a href="mailto:jwsmith@colostate.edu">jwsmith@colostate.edu</a>
-            </div>
+            <h1>Mohan Krishna Ganne</h1>
+            <p>
+                +1 (316) 214-0932 | <a href="mailto:mohankrishna5618@gmail.com">mohankrishna5618@gmail.com</a> | 
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/mohankrishnaganne/mcp-demo-repo/blob/main/portfolio.html" target="_blank">Portfolio</a> | 
+                Open to Relocation
+            </p>
         </header>
 
-        <section class="section">
-            <h2>Career Summary</h2>
-            <p>Four years experience in early childhood development with a diverse background in the care of special needs children and adults.</p>
+        <section class="summary">
+            <h2>Summary</h2>
+            <p>
+                AI/ML Engineer with 5+ years of experience building production-grade machine learning, Generative AI, and LLM systems across smart devices, 
+                digital engineering, and AI infrastructure domains. Experienced in developing RAG pipelines, multimodal AI applications, fine-tuning workflows, 
+                model evaluation frameworks, distributed data pipelines, and scalable inference services on cloud-native architectures. Strong background in 
+                MLOps, LLMOps, model serving, and end-to-end ownership of AI systems from experimentation through production deployment.
+            </p>
         </section>
 
-        <section class="section">
+        <section class="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Scala</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Machine Learning & Deep Learning</h3>
+                    <ul>
+                        <li>PyTorch, TensorFlow, Scikit-learn, XGBoost, LightGBM</li>
+                        <li>Feature Engineering, Hyperparameter Optimization, Ensemble Learning</li>
+                        <li>Time-Series Forecasting, Model Evaluation, Explainable AI (SHAP, LIME)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Generative AI & LLMs</h3>
+                    <ul>
+                        <li>Hugging Face Transformers, LLaMA, GPT APIs, Prompt Engineering</li>
+                        <li>LangChain, LangGraph, Tool-Calling Agents, LoRA, QLoRA, PEFT, Fine-Tuning</li>
+                        <li>Retrieval-Augmented Generation (RAG), Embeddings</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Vector Databases & Retrieval</h3>
+                    <ul>
+                        <li>Pinecone, FAISS, Weaviate, Elasticsearch</li>
+                        <li>Semantic Search, Hybrid Search, Cross-Encoder Reranking</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>MLOps & AI Infrastructure</h3>
+                    <ul>
+                        <li>MLflow, Weights & Biases, Airflow, DVC</li>
+                        <li>Docker, Kubernetes, CI/CD Pipelines, Drift Detection, A/B Testing</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Distributed Computing & Data Engineering</h3>
+                    <ul>
+                        <li>Apache Spark, Databricks, Snowflake, Kafka, Ray</li>
+                        <li>ETL Pipelines, Distributed Training, dbt (implied by modern data stack)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Model Serving & Optimization</h3>
+                    <ul>
+                        <li>FastAPI, REST APIs, gRPC, vLLM</li>
+                        <li>ONNX Runtime, TensorRT, Quantization</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud Platforms</h3>
+                    <ul>
+                        <li>AWS (S3, EC2, Lambda, SageMaker, Bedrock)</li>
+                        <li>Azure OpenAI Service, Terraform</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases, Tools & Platforms</h3>
+                    <ul>
+                        <li>PostgreSQL, MongoDB, Redis</li>
+                        <li>Git, GitHub Actions, Linux, Jira, Confluence</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience">
             <h2>Experience</h2>
-
             <div class="experience-item">
-                <h3>Adult Care Experience</h3>
+                <div class="experience-header">
+                    <h3>NIAR</h3>
+                    <span>Mar 2025 – Present | United States</span>
+                </div>
+                <h4>AI/ML Engineer</h4>
                 <ul>
-                    <li>Determined work placement for 150 special needs adult clients, utilizing structured assessment and matching processes.</li>
-                    <li><span class="highlight">Maintained client databases and records</span>, ensuring data integrity and accessibility for reporting and client management.</li>
-                    <li>Coordinated client contact with local health care professionals on a monthly basis, managing communication flows and schedules.</li>
-                    <li>Managed 25 volunteer workers, including task assignment, scheduling, and performance oversight.</li>
+                    <li>Developed Generative AI and RAG-based engineering knowledge assistants using Python, LangChain, LangGraph, OpenAI APIs, Pinecone, and hybrid retrieval, enabling researchers to query 1.8 million technical records and reducing document search efforts by 320 hours per quarter.</li>
+                    <li>Built machine learning pipelines with PyTorch, Hugging Face Transformers, MLflow, and Databricks to support predictive maintenance and structural health monitoring initiatives, processing 14 TB of sensor and inspection datasets across aircraft sustainment programs.</li>
+                    <li>Fine-tuned domain-specific language models using LoRA, QLoRA, and PEFT techniques, reducing training resource requirements and supporting specialized question-answering workflows for engineering documentation and certification datasets.</li>
+                    <li>Designed FastAPI-based inference services with vLLM, ONNX Runtime, Docker, and Kubernetes, supporting approximately 75,000 monthly inference requests and reducing model release cycles from three weeks to six days.</li>
+                    <li>Developed evaluation frameworks using RAGAS, DeepEval, and hallucination detection techniques, supported production AI services, and resolved more than 110 issues affecting model reliability and data quality.</li>
+                    <li>Implemented distributed feature engineering and ETL pipelines using <strong>Spark, Airflow, Kafka, Snowflake, and AWS S3</strong>, enabling scalable data ingestion and analytics for digital twin and predictive maintenance initiatives.</li>
                 </ul>
             </div>
 
             <div class="experience-item">
-                <h3>Childcare Experience</h3>
+                <div class="experience-header">
+                    <h3>Resideo Smart Home Technologies (Honeywell Home)</h3>
+                    <span>Feb 2021 – Aug 2024 | India</span>
+                </div>
+                <h4>Machine Learning Engineer</h4>
                 <ul>
-                    <li>Coordinated service assignments for 20 part-time counselors and 100 client families, optimizing resource allocation.</li>
-                    <li>Oversaw daily activity and outing planning for 100 clients, ensuring safety and engagement.</li>
-                    <li>Assisted families of special needs clients with researching financial assistance and healthcare resources, providing critical information and support.</li>
-                    <li>Assisted teachers with managing daily classroom activities, contributing to a structured learning environment.</li>
-                    <li>Oversaw daily and special student activities, ensuring smooth operation and positive experiences.</li>
+                    <li>Developed time-series forecasting models using TensorFlow, XGBoost, and <strong>PySpark</strong> to analyze telemetry from more than 2.4 million connected thermostats, enabling energy optimization initiatives and reducing peak-load prediction errors across smart home environments.</li>
+                    <li>Built anomaly detection pipelines for HVAC devices using Scikit-learn and <strong>Kafka</strong>-based streaming data, processing approximately 3 million sensor events daily and identifying failure patterns that reduced customer support escalations by 18%.</li>
+                    <li>Designed recommendation and customer segmentation models with LightGBM, SHAP, and <strong>PostgreSQL</strong>, supporting personalized automation experiences for 1.4 million users and improving adoption of premium smart home features.</li>
+                    <li>Implemented computer vision workflows using OpenCV, TensorFlow, and EfficientNet architectures to automate manufacturing quality inspections, analyzing 620,000 device images and reducing manual review efforts by 430 engineering hours annually.</li>
+                    <li>Collaborated with firmware and embedded engineering teams to develop occupancy prediction algorithms and ensemble learning models based on sensor telemetry, enabling intelligent temperature scheduling across multiple device families.</li>
+                    <li>Established ML lifecycle practices with MLflow, Jenkins, Docker, Git, and A/B testing frameworks, reducing model retraining times from 9 hours to under 4 hours and enabling biweekly production releases.</li>
+                    <li>Created NLP pipelines using spaCy and NLTK to classify customer feedback and warranty claims, extracting insights from more than 2.7 million records and accelerating root cause investigations for recurring product issues.</li>
+                    <li>Provided production support for machine learning services hosted on <strong>AWS</strong> and Linux environments, conducted root cause analysis, documented model behavior, and resolved over 140 issues affecting prediction quality and pipeline reliability.</li>
                 </ul>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Employment History</h2>
-            <div class="clear-fix">
-                <span class="job-title">Counseling Supervisor</span>, <span class="company-name">The Wesley Center</span>, Little Rock, Arkansas
-                <span class="date-range">1999-2002</span>
+        <section class="projects">
+            <h2>Selected Projects</h2>
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Multimodal Document AI & Agent System</h3>
+                </div>
+                <ul>
+                    <li>Built a multimodal document processing system integrating vision transformers, OCR pipelines, and LLM-based reasoning to extract structured data from invoices, IDs, and PDFs, processing 50K+ documents in batch and experimental settings with optimized per-page inference.</li>
+                    <li>Developed an LLM-based agent workflow using LangChain and retrieval-augmented generation over document embeddings to automate classification, field extraction, and validation tasks, reducing manual annotation effort by 25% in controlled evaluation experiments.</li>
+                </ul>
             </div>
-            <div class="clear-fix">
-                <span class="job-title">Client Specialist</span>, <span class="company-name">Rainbow Special Care Center</span>, Little Rock, Arkansas
-                <span class="date-range">1997-1999</span>
-            </div>
-            <div class="clear-fix">
-                <span class="job-title">Teacher’s Assistant</span>, <span class="company-name">Cowell Elementary</span>, Conway, Arkansas
-                <span class="date-range">1996-1997</span>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Real-Time LLM-Powered Decision Intelligence & Forecasting Platform</h3>
+                </div>
+                <ul>
+                    <li>Developed a forecasting system combining time-series transformer models with LLM-assisted analytics to analyze operational and synthetic demand datasets, enabling near real-time prediction experiments with sub-2-second inference in prototype environments.</li>
+                    <li>Implemented a GenAI analytics layer using retrieval-augmented generation over historical datasets and dashboards, enabling natural language querying, anomaly explanation, and scenario analysis, improving forecasting accuracy (MAPE) by 18% in validation tests.</li>
+                </ul>
             </div>
         </section>
 
-        <section class="section">
+        <section class="education">
             <h2>Education</h2>
             <div class="education-item">
-                <h3>University of Arkansas at Little Rock, Little Rock, AR</h3>
-                <ul>
-                    <li>BS in Early Childhood Development (1999)</li>
-                    <li>BA in Elementary Education (1998)</li>
-                    <li>GPA (4.0 Scale): Early Childhood Development – 3.8, Elementary Education – 3.5, Overall 3.4.</li>
-                    <li>Dean’s List, Chancellor’s List</li>
-                </ul>
+                <h3>Master of Science in Data Science</h3>
+                <p>Wichita State University, Kansas | GPA: 3.80/4.0</p>
             </div>
         </section>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Mohan Krishna Ganne. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+```
