@@ -1,366 +1,232 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="portfolio-generated-at" content="2026-07-26T21:25:04.541273">
+<meta name="portfolio-generated-at" content="2026-07-26T21:42:52.312107">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sampath Kumar Muthyalapati - Data-focused Software Engineer Portfolio">
-    <meta name="keywords" content="Data Engineering, Data Analytics, ETL, Visualization, AWS, Python, SQL, MongoDB, Power BI, NumPy, Pandas, Machine Learning, React.js, Node.js">
-    <meta name="author" content="Sampath Kumar Muthyalapati">
-    <meta name="version-timestamp" content="2026-07-26T21:25:04.541273">
-    <title>Sampath Kumar Muthyalapati - Data-Focused Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="timestamp" content="2026-07-26T21:42:52.312107">
+    <title>Mohan Krishna Ganne - Data & AI Portfolio</title>
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --text-color: #333;
-            --light-text-color: #555;
-            --bg-color: #f4f7f6;
-            --card-bg-color: #ffffff;
-            --border-color: #e0e0e0;
-        }
-
-        * {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #f4f7f6;
+            color: #333;
         }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            padding: 20px;
-        }
-
         .container {
-            max-width: 1100px;
+            max-width: 900px;
             margin: 20px auto;
-            background-color: var(--card-bg-color);
+            background: #ffffff;
+            padding: 30px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            padding: 30px;
         }
-
         header {
             text-align: center;
             padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid #e0e0e0;
             margin-bottom: 30px;
         }
-
         header h1 {
-            color: var(--primary-color);
-            font-size: 2.8em;
-            margin-bottom: 10px;
+            margin: 0;
+            color: #2c3e50;
+            font-size: 2.5em;
         }
-
         header p {
+            margin: 5px 0;
+            color: #555;
             font-size: 1.1em;
-            color: var(--light-text-color);
-            margin-bottom: 5px;
         }
-
-        header .contact-info a {
-            color: var(--secondary-color);
+        header a {
+            color: #007bff;
             text-decoration: none;
             margin: 0 10px;
-            transition: color 0.3s ease;
         }
-
-        header .contact-info a:hover {
-            color: var(--accent-color);
-        }
-
-        section {
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        section:last-of-type {
-            border-bottom: none;
-            margin-bottom: 0;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            font-size: 2em;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 15px;
-        }
-
-        .summary p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: var(--light-text-color);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-category {
-            background-color: var(--bg-color);
-            padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-        }
-
-        .skill-category h3 {
-            color: var(--secondary-color);
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 5px;
-        }
-
-        .skill-category ul {
-            list-style: none;
-        }
-
-        .skill-category ul li {
-            margin-bottom: 8px;
-            padding-left: 15px;
-            position: relative;
-        }
-
-        .skill-category ul li::before {
-            content: '•';
-            color: var(--accent-color);
-            position: absolute;
-            left: 0;
-        }
-
-        .experience-item, .project-item, .education-item {
-            background-color: var(--card-bg-color);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-        }
-
-        .experience-item h3, .project-item h3 {
-            color: var(--primary-color);
-            font-size: 1.5em;
-            margin-bottom: 5px;
-        }
-
-        .experience-item p, .project-item p, .education-item p {
-            color: var(--light-text-color);
-            margin-bottom: 10px;
-        }
-
-        .experience-item ul, .project-item ul {
-            list-style: disc;
-            margin-left: 20px;
-            color: var(--light-text-color);
-        }
-
-        .experience-item ul li, .project-item ul li {
-            margin-bottom: 8px;
-        }
-
-        .project-item .project-links a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            margin-right: 15px;
-            font-weight: bold;
-        }
-
-        .project-item .project-links a:hover {
+        header a:hover {
             text-decoration: underline;
         }
-
-        .education-item h3 {
-            color: var(--primary-color);
-            font-size: 1.4em;
-            margin-bottom: 5px;
+        section {
+            margin-bottom: 30px;
         }
-
-        .education-item .degree {
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 25px;
+            margin-top: 10px;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+        .experience-item, .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+        .experience-item:last-child, .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .job-title {
             font-weight: bold;
-            color: var(--secondary-color);
+            color: #34495e;
+            font-size: 1.2em;
         }
-
-        footer {
-            text-align: center;
-            padding-top: 20px;
-            color: var(--light-text-color);
+        .company-name {
+            font-style: italic;
+            color: #555;
+        }
+        .date-range {
+            float: right;
+            color: #777;
             font-size: 0.9em;
         }
-
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px auto;
-                padding: 20px;
-            }
-
-            header h1 {
-                font-size: 2em;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-
-            h2 {
-                font-size: 1.8em;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
+        .skills-category {
+            margin-bottom: 15px;
+        }
+        .skills-category strong {
+            color: #34495e;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .skills-category span {
+            display: block;
+            color: #555;
+        }
+        .education-item {
+            margin-bottom: 15px;
+        }
+        .education-item p {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Sampath Kumar Muthyalapati</h1>
-            <p class="contact-info">
-                <a href="tel:+13163043795">+1 3163043795</a> | 
-                <a href="mailto:sampathkumarmuthyalapati@gmail.com">sampathkumarmuthyalapati@gmail.com</a> | 
-                <a href="https://www.linkedin.com/in/sampathkumarmuthyalapati" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
-                <a href="https://github.com/mohankrishnaganne" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <h1>Mohan Krishna Ganne</h1>
+            <p>
+                +1 (316) 214-0932 | <a href="mailto:mohankrishna5618@gmail.com">mohankrishna5618@gmail.com</a> | 
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/mohankrishnaganne" target="_blank">Portfolio</a> | Open to Relocation
             </p>
         </header>
 
-        <section class="summary">
-            <h2>About Me</h2>
-            <p>
-                Aspiring Data-focused Software Engineer with a strong foundation in Python, SQL, and modern web technologies. 
-                Proficient in data analysis, visualization, and backend development, with hands-on experience in AWS cloud services. 
-                Eager to leverage skills in data engineering, ETL processes, and analytical problem-solving to build robust data pipelines and derive actionable insights. 
-                Committed to continuous learning and enhancing expertise in the modern data stack.
-            </p>
-        </section>
+        <main>
+            <section id="summary">
+                <h2>Summary</h2>
+                <p>
+                    AI/ML Engineer with 5+ years of experience building production-grade machine learning, Generative AI, and LLM systems across smart devices, 
+                    digital engineering, and AI infrastructure domains. Experienced in developing RAG pipelines, multimodal AI applications, fine-tuning workflows, 
+                    model evaluation frameworks, distributed data pipelines, and scalable inference services on cloud-native architectures. Strong background in 
+                    MLOps, LLMOps, model serving, and end-to-end ownership of AI systems from experimentation through production deployment.
+                </p>
+            </section>
 
-        <section class="skills">
-            <h2>Skills & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Data Engineering & Analytics</h3>
+            <section id="skills">
+                <h2>Skills</h2>
+                <div class="skills-category">
+                    <strong>Programming Languages:</strong> <span>Python, SQL, Scala</span>
+                </div>
+                <div class="skills-category">
+                    <strong>Machine Learning & Deep Learning:</strong> <span>PyTorch, TensorFlow, Scikit-learn, XGBoost, LightGBM, Feature Engineering, Hyperparameter Optimization, Ensemble Learning, Time-Series Forecasting, Model Evaluation, Explainable AI (SHAP, LIME)</span>
+                </div>
+                <div class="skills-category">
+                    <strong>Generative AI & LLMs:</strong> <span>Hugging Face Transformers, LLaMA, GPT APIs, Prompt Engineering, LangChain, LangGraph, Tool-Calling Agents, LoRA, QLoRA, PEFT, Fine-Tuning, Retrieval-Augmented Generation (RAG), Embeddings</span>
+                </div>
+                <div class="skills-category">
+                    <strong>Vector Databases & Retrieval:</strong> <span>Pinecone, FAISS, Weaviate, Elasticsearch, Semantic Search, Hybrid Search, Cross-Encoder Reranking</span>
+                </div>
+                <div class="skills-category">
+                    <strong>MLOps & AI Infrastructure:</strong> <span>MLflow, Weights & Biases, <strong>Airflow</strong>, DVC, Docker, Kubernetes, CI/CD Pipelines, Drift Detection, A/B Testing</span>
+                </div>
+                <div class="skills-category">
+                    <strong>Distributed Computing & Data Engineering:</strong> <span><strong>Apache Spark</strong>, <strong>Databricks</strong>, <strong>Snowflake</strong>, <strong>Kafka</strong>, Ray, <strong>ETL Pipelines</strong>, Distributed Training</span>
+                </div>
+                <div class="skills-category">
+                    <strong>Model Serving & Optimization:</strong> <span>FastAPI, REST APIs, gRPC, vLLM, ONNX Runtime, TensorRT, Quantization</span>
+                </div>
+                <div class="skills-category">
+                    <strong>Cloud Platforms:</strong> <span><strong>AWS</strong> (S3, EC2, Lambda, SageMaker, Bedrock), Azure OpenAI Service, Terraform</span>
+                </div>
+                <div class="skills-category">
+                    <strong>Databases, Tools & Platforms:</strong> <span>PostgreSQL, MongoDB, Redis, Git, GitHub Actions, Linux, Jira, Confluence</span>
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="experience-item">
+                    <p class="job-title">AI/ML Engineer <span class="date-range">Mar 2025 – Present</span></p>
+                    <p class="company-name">NIAR, United States</p>
                     <ul>
-                        <li><strong>Languages:</strong> Python, SQL</li>
-                        <li><strong>Data Analysis:</strong> NumPy, Pandas, Scikit-learn, Machine Learning, Microsoft Excel</li>
-                        <li><strong>Databases:</strong> MongoDB, SQLite</li>
-                        <li><strong>Visualization:</strong> Power BI</li>
-                        <li><strong>Cloud Data Services:</strong> Amazon S3 (Data Lake Storage), Amazon EC2 (Compute)</li>
-                        <li><strong>ETL Concepts:</strong> Data Extraction, Transformation, Loading (using Python, SQL)</li>
+                        <li>Developed Generative AI and RAG-based engineering knowledge assistants using Python, LangChain, LangGraph, OpenAI APIs, Pinecone, and hybrid retrieval, enabling researchers to query 1.8 million technical records and reducing document search efforts by 320 hours per quarter.</li>
+                        <li>Built machine learning pipelines with PyTorch, Hugging Face Transformers, MLflow, and <strong>Databricks</strong> to support predictive maintenance and structural health monitoring initiatives, processing 14 TB of sensor and inspection datasets across aircraft sustainment programs.</li>
+                        <li>Fine-tuned domain-specific language models using LoRA, QLoRA, and PEFT techniques, reducing training resource requirements and supporting specialized question-answering workflows for engineering documentation and certification datasets.</li>
+                        <li>Designed FastAPI-based inference services with vLLM, ONNX Runtime, Docker, and Kubernetes, supporting approximately 75,000 monthly inference requests and reducing model release cycles from three weeks to six days.</li>
+                        <li>Developed evaluation frameworks using RAGAS, DeepEval, and hallucination detection techniques, supported production AI services, and resolved more than 110 issues affecting model reliability and <strong>data quality</strong>.</li>
+                        <li>Implemented distributed feature engineering and <strong>ETL pipelines</strong> using <strong>Spark</strong>, <strong>Airflow</strong>, <strong>Kafka</strong>, <strong>Snowflake</strong>, and <strong>AWS S3</strong>, enabling scalable <strong>data ingestion and analytics</strong> for digital twin and predictive maintenance initiatives.</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Cloud & Backend Development</h3>
+
+                <div class="experience-item">
+                    <p class="job-title">Machine Learning Engineer <span class="date-range">Feb 2021 – Aug 2024</span></p>
+                    <p class="company-name">Resideo Smart Home Technologies (Honeywell Home), India</p>
                     <ul>
-                        <li><strong>Cloud Platforms:</strong> AWS (EC2, S3, Route53, CloudFront, IAM, Snapshots)</li>
-                        <li><strong>Backend Frameworks:</strong> Node.js, Express.js</li>
-                        <li><strong>Version Control:</strong> GitHub</li>
-                        <li><strong>Operating Systems:</strong> Linux</li>
+                        <li>Developed time-series forecasting models using TensorFlow, XGBoost, and <strong>PySpark</strong> to analyze telemetry from more than 2.4 million connected thermostats, enabling energy optimization initiatives and reducing peak-load prediction errors across smart home environments.</li>
+                        <li>Built anomaly detection pipelines for HVAC devices using Scikit-learn and <strong>Kafka</strong>-based streaming <strong>data</strong>, processing approximately 3 million sensor events daily and identifying failure patterns that reduced customer support escalations by 18%.</li>
+                        <li>Designed recommendation and customer segmentation models with LightGBM, SHAP, and PostgreSQL, supporting personalized automation experiences for 1.4 million users and improving adoption of premium smart home features.</li>
+                        <li>Implemented computer vision workflows using OpenCV, TensorFlow, and EfficientNet architectures to automate manufacturing quality inspections, analyzing 620,000 device images and reducing manual review efforts by 430 engineering hours annually.</li>
+                        <li>Collaborated with firmware and embedded engineering teams to develop occupancy prediction algorithms and ensemble learning models based on sensor telemetry, enabling intelligent temperature scheduling across multiple device families.</li>
+                        <li>Established ML lifecycle practices with MLflow, Jenkins, Docker, Git, and A/B testing frameworks, reducing model retraining times from 9 hours to under 4 hours and enabling biweekly production releases.</li>
+                        <li>Created NLP pipelines using spaCy and NLTK to classify customer feedback and warranty claims, extracting insights from more than 2.7 million records and accelerating root cause investigations for recurring product issues.</li>
+                        <li>Provided production support for machine learning services hosted on <strong>AWS</strong> and Linux environments, conducted root cause analysis, documented model behavior, and resolved over 140 issues affecting prediction quality and pipeline reliability.</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Frontend Development</h3>
+            </section>
+
+            <section id="projects">
+                <h2>Selected Projects</h2>
+                <div class="project-item">
+                    <h3>Multimodal Document AI & Agent System</h3>
                     <ul>
-                        <li><strong>Languages:</strong> HTML, CSS, JavaScript</li>
-                        <li><strong>Libraries/Frameworks:</strong> React.js, Bootstrap</li>
-                        <li><strong>State Management:</strong> Redux Toolkit</li>
-                        <li><strong>Responsive Design:</strong> Media Queries, Flexbox, Grid</li>
+                        <li>Built a multimodal document processing system integrating vision transformers, OCR pipelines, and LLM-based reasoning to extract structured data from invoices, IDs, and PDFs, processing 50K+ documents in batch and experimental settings with optimized per-page inference.</li>
+                        <li>Developed an LLM-based agent workflow using LangChain and retrieval-augmented generation over document embeddings to automate classification, field extraction, and validation tasks, reducing manual annotation effort by 25% in controlled evaluation experiments.</li>
                     </ul>
                 </div>
-            </div>
-        </section>
+                <div class="project-item">
+                    <h3>Real-Time LLM-Powered Decision Intelligence & Forecasting Platform</h3>
+                    <ul>
+                        <li>Developed a forecasting system combining time-series transformer models with LLM-assisted analytics to analyze operational and synthetic demand datasets, enabling near real-time prediction experiments with sub-2-second inference in prototype environments.</li>
+                        <li>Implemented a GenAI analytics layer using retrieval-augmented generation over historical datasets and dashboards, enabling natural language querying, anomaly explanation, and scenario analysis, improving forecasting accuracy (MAPE) by 18% in validation tests.</li>
+                    </ul>
+                </div>
+            </section>
 
-        <section class="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <h3>Teaching Assistant</h3>
-                <p>Nxtwave | Jun 2025 - Ongoing</p>
-                <ul>
-                    <li>Provided guidance on server-side scripting using <strong>Python and SQL</strong>, emphasizing data manipulation and database interaction crucial for data engineering roles.</li>
-                    <li>Assisted students in understanding core concepts of web development technologies, including HTML, CSS, JavaScript, React.js, Node.js, and Express.js.</li>
-                    <li>Resolved complex coding issues, fostering a deeper understanding of backend logic and efficient data handling practices.</li>
-                </ul>
-            </div>
-            <div class="experience-item">
-                <h3>Front End Developer</h3>
-                <p>Snagger India | Jan 2024 - Jun 2024</p>
-                <ul>
-                    <li>Integrated backend operations using Node.js, focusing on efficient <strong>data handling and allocation mechanisms</strong> for a bidding system application.</li>
-                    <li>Developed a responsive bidding system application using React.js, Redux Toolkit, and Bootstrap, optimizing user experience and data presentation.</li>
-                    <li>Collaborated with cross-functional teams to ensure seamless project execution and data flow across different application components.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="projects">
-            <h2>Key Projects</h2>
-            <div class="project-item">
-                <h3>Suby App</h3>
-                <p>Developed a food ordering and delivery application.</p>
-                <ul>
-                    <li>Implemented secure backend operations using Express.js and <strong>MongoDB</strong>, facilitating efficient <strong>data management and order processing</strong> for multiple vendors.</li>
-                    <li>Designed a user-friendly interface with React.js, HTML, CSS, and JavaScript, enabling seamless navigation and interaction for product and offer management.</li>
-                    <li>Focused on robust data storage and retrieval strategies to support vendor and customer functionalities.</li>
-                </ul>
-                <p class="project-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-                </p>
-            </div>
-            <div class="project-item">
-                <h3>Todos Application</h3>
-                <p>Designed a task management application.</p>
-                <ul>
-                    <li>Ensured secure <strong>task persistence with local storage methods</strong>, providing users with reliable data access and management.</li>
-                    <li>Implemented CRUD (Create, Read, Update, Delete) operations using JavaScript for dynamic UI updates and efficient data manipulation.</li>
-                    <li>Streamlined task management through an intuitive interface built with HTML, CSS, and Bootstrap.</li>
-                </ul>
-                <p class="project-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-                </p>
-            </div>
-            <div class="project-item">
-                <h3>Tourism Website</h3>
-                <p>Built a responsive tourism website.</p>
-                <ul>
-                    <li>Showcased multimedia content and details about popular travel destinations, demonstrating skills in content presentation and data display.</li>
-                    <li>Implemented destination-specific image carousels and virtual tour videos using Bootstrap components for an engaging user experience.</li>
-                    <li>Constructed a mobile-adaptive layout with HTML and CSS3 properties, ensuring broad accessibility.</li>
-                </ul>
-                <p class="project-links">
-                    <a href="#" target="_blank" rel="noopener noreferrer">View Project</a>
-                </p>
-            </div>
-        </section>
-
-        <section class="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Wichita State University, Wichita</h3>
-                <p class="degree">Master’s in Computer Science Engineering</p>
-                <p>2024 - 2026 | Grade: 3.9 CGPA</p>
-            </div>
-            <div class="education-item">
-                <h3>Vasireddy Venkatadri Institute of Technology, Guntur</h3>
-                <p class="degree">Bachelor of Technology, Computer Science Engineering</p>
-                <p>2020 - 2024 | Grade: 7.83 CGPA</p>
-            </div>
-        </section>
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Master of Science in Data Science</h3>
+                    <p>Wichita State University, Kansas <span style="float:right;">GPA: 3.80/4.0</span></p>
+                </div>
+            </section>
+        </main>
     </div>
-
-    <footer>
-        <p>&copy; <span id="current-year"></span> Sampath Kumar Muthyalapati. All rights reserved.</p>
-    </footer>
-
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
+```
