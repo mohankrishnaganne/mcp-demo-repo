@@ -1,352 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="portfolio-generated-at" content="2026-07-23T01:57:32Z">
-<meta name="portfolio-generated-at" content="2026-07-23T01:56:47.744994">
+<meta name="portfolio-generated-at" content="2026-07-26T20:53:11.105352">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sampath Kumar Muthyalapati - Data Analyst & Data Engineer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="John W. Smith's Professional Portfolio">
+    <meta name="generator" content="Resume to HTML Portfolio Converter">
+    <meta name="timestamp" content="2026-07-26T20:53:11.105352">
+    <title>John W. Smith - Portfolio</title>
     <style>
-        :root {
-            --primary-color: #2c3e50; /* Dark blue/grey */
-            --secondary-color: #3498db; /* Bright blue */
-            --accent-color: #e74c3c; /* Red for highlights */
-            --text-color: #333;
-            --light-bg: #f4f7f6;
-            --white: #ffffff;
-            --border-color: #e0e0e0;
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 0;
-            background-color: var(--light-bg);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            min-height: 100vh;
+            padding: 20px;
+            background-color: #f4f7f6;
+            color: #333;
         }
-
         .container {
-            width: 100%;
-            max-width: 960px;
-            background-color: var(--white);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            margin: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
             padding: 30px;
             border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
-
-        header {
-            text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid var(--primary-color);
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            color: var(--primary-color);
-            margin: 0;
-            font-size: 2.8em;
-            font-weight: 700;
-        }
-
-        header p {
-            color: #666;
-            margin: 5px 0;
-            font-size: 1.1em;
-        }
-
-        .contact-info {
-            margin-top: 15px;
-            font-size: 0.95em;
-        }
-
-        .contact-info a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            margin: 0 10px;
-            transition: color 0.3s ease;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent-color);
-        }
-
-        section {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        section:last-of-type {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        h2 {
-            color: var(--primary-color);
-            font-size: 1.8em;
+        h1, h2, h3 {
+            color: #2c3e50;
             margin-bottom: 15px;
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 10px;
         }
-
-        .summary p {
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+        h2 {
+            font-size: 1.8em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            color: #34495e;
+        }
+        .contact-info {
+            text-align: center;
+            margin-bottom: 30px;
             font-size: 1.1em;
-            line-height: 1.7;
             color: #555;
         }
-
-        .experience-item, .project-item, .education-item {
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .section {
             margin-bottom: 25px;
-            padding-left: 15px;
-            border-left: 3px solid var(--border-color);
         }
-
-        .experience-item h3, .project-item h3, .education-item h3 {
-            color: var(--primary-color);
-            margin: 0 0 5px 0;
-            font-size: 1.4em;
-        }
-
-        .experience-item p, .project-item p, .education-item p {
-            margin: 0 0 5px 0;
-            color: #666;
-            font-size: 0.95em;
-        }
-
-        .experience-item ul, .project-item ul {
+        .section ul {
             list-style-type: disc;
-            padding-left: 20px;
+            padding-left: 25px;
             margin-top: 10px;
         }
-
-        .experience-item li, .project-item li {
+        .section ul li {
             margin-bottom: 8px;
-            color: #444;
         }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 15px;
+        .job-title {
+            font-weight: bold;
+            color: #34495e;
         }
-
-        .skill-category {
-            background-color: var(--light-bg);
-            padding: 15px;
-            border-radius: 5px;
-            border: 1px solid var(--border-color);
+        .company-name {
+            font-style: italic;
+            color: #666;
         }
-
-        .skill-category h4 {
-            color: var(--secondary-color);
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-            border-bottom: 1px dashed var(--border-color);
-            padding-bottom: 5px;
+        .date-range {
+            float: right;
+            color: #777;
         }
-
-        .skill-category ul {
+        .clear-fix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .education-item {
+            margin-bottom: 15px;
+        }
+        .education-item ul {
             list-style-type: none;
-            padding: 0;
-            margin: 0;
+            padding-left: 0;
+            margin-top: 5px;
         }
-
-        .skill-category li {
+        .education-item ul li {
             margin-bottom: 5px;
-            font-size: 0.95em;
         }
-
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px;
-                padding: 20px;
-            }
-            header h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
+        .highlight {
+            background-color: #eaf2f8; /* Light blue background for emphasis */
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Sampath Kumar Muthyalapati</h1>
-            <p>Data Analyst | Data Engineer</p>
+            <h1>John W. Smith</h1>
             <div class="contact-info">
-                <a href="tel:+13163043795">+1 (316) 304-3795</a> |
-                <a href="mailto:Sampathkumarmuthyalapati@gmail.com">Sampathkumarmuthyalapati@gmail.com</a> |
-                <!-- Add LinkedIn and GitHub if available -->
+                2002 Front Range Way Fort Collins, CO 80525 | <a href="mailto:jwsmith@colostate.edu">jwsmith@colostate.edu</a>
             </div>
         </header>
 
-        <section class="summary">
-            <h2>Summary</h2>
-            <p>
-                Data Analyst with 4 years of experience in building <strong>data pipelines</strong>, developing predictive models, and delivering scalable analytics solutions. Proven success in optimizing <strong>ETL workflows</strong> and automating data processes, leading to a 30% improvement in reporting speed. Skilled in Python, SQL, Power BI, Tableau, and cloud platforms like <strong>AWS</strong> and <strong>Azure</strong>. Expertise in <strong>data modeling, visualization</strong>, and machine learning, contributing to a 40% increase in decision-making efficiency and a 25% reduction in operational overhead.
-            </p>
+        <section class="section">
+            <h2>Career Summary</h2>
+            <p>Four years experience in early childhood development with a diverse background in the care of special needs children and adults.</p>
         </section>
 
-        <section class="skills">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>Programming Languages</h4>
-                    <ul>
-                        <li>Python, SQL, Java</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Data Warehousing & ETL</h4>
-                    <ul>
-                        <li><strong>Snowflake</strong>, <strong>Apache Spark</strong>, Hive, <strong>dbt</strong> (Data Build Tool), <strong>Apache Airflow</strong>, FiveTran, <strong>Azure Data Factory</strong>, Apache NiFi</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Big Data & Real-time Streaming</h4>
-                    <ul>
-                        <li><strong>Apache Kafka</strong>, <strong>Spark Streaming</strong>, <strong>AWS Kinesis</strong>, <strong>Azure Event Hubs</strong></li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Cloud Platforms & Technologies</h4>
-                    <ul>
-                        <li><strong>Google Cloud Platform (GCP)</strong>, <strong>Amazon Web Services (AWS)</strong>, <strong>Microsoft Azure</strong>, Azure Data Lake</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Database Technologies</h4>
-                    <ul>
-                        <li>MySQL, PostgreSQL, Oracle, MongoDB</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Machine Learning & Data Science</h4>
-                    <ul>
-                        <li>FB Prophet, Supervised Learning Models, Feature Extraction and Selection, Hyperparameter Tuning</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Web Technologies</h4>
-                    <ul>
-                        <li>Flask, REST APIs, Postman</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Containerization & CI/CD</h4>
-                    <ul>
-                        <li>Docker, GitHub Actions, Jenkins</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Data Visualization & Reporting</h4>
-                    <ul>
-                        <li><strong>Power BI</strong>, <strong>Tableau</strong>, Excel</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Version Control</h4>
-                    <ul>
-                        <li>Git, GitHub, Bitbucket</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Project Management Tools</h4>
-                    <ul>
-                        <li>JIRA, Trello, Version One</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Other Tools & Technologies</h4>
-                    <ul>
-                        <li>Apache ZooKeeper, Terraform, ELK Stack (Elasticsearch, Logstash, Kibana), Great Expectations</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4>Shared Skills Across Roles</h4>
-                    <ul>
-                        <li><strong>ETL/ELT Pipelines</strong>, <strong>Data Quality Checks</strong>, <strong>Real-Time Data Ingestion</strong>, <strong>Data Migration</strong>, <strong>Data Architecture Design</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="experience">
+        <section class="section">
             <h2>Experience</h2>
+
             <div class="experience-item">
-                <h3>Program Analyst (Machine Learning) <span style="float:right;">Aug 2022 – May 2024</span></h3>
-                <p><strong>Cognizant Technology Solutions</strong> | India</p>
+                <h3>Adult Care Experience</h3>
                 <ul>
-                    <li>Built and maintained scalable <strong>ETL pipelines</strong> to process 10TB+ of data daily, ensuring high <strong>data quality</strong> and availability for machine learning models.</li>
-                    <li>Deployed machine learning models into production environments, automating predictions and saving 20+ hours per week in manual analysis.</li>
-                    <li>Optimized <strong>SQL queries</strong> and database schemas, improving <strong>data retrieval speeds</strong> by 25% for downstream machine learning tasks.</li>
-                    <li>Automated <strong>data preprocessing</strong> tasks with Python and <strong>PySpark</strong>, reducing model training time by 40% and enhancing efficiency.</li>
-                    <li>Formulated a cloud-based <strong>data pipeline architecture</strong> using <strong>GCP</strong> and <strong>Airflow</strong>, enabling the team to scale data operations by 50% during peak loads.</li>
-                    <li>Collaborated with cross-functional teams to deliver actionable insights, driving a 15% increase in operational efficiency through <strong>data-driven decisions</strong>.</li>
+                    <li>Determined work placement for 150 special needs adult clients, utilizing structured assessment and matching processes.</li>
+                    <li><span class="highlight">Maintained client databases and records</span>, ensuring data integrity and accessibility for reporting and client management.</li>
+                    <li>Coordinated client contact with local health care professionals on a monthly basis, managing communication flows and schedules.</li>
+                    <li>Managed 25 volunteer workers, including task assignment, scheduling, and performance oversight.</li>
                 </ul>
             </div>
+
             <div class="experience-item">
-                <h3>Data Analyst <span style="float:right;">Jun 2020 – July 2022</span></h3>
-                <p><strong>Devpoint Solutions Pvt Ltd</strong> | India</p>
+                <h3>Childcare Experience</h3>
                 <ul>
-                    <li>Developed and maintained <strong>ETL pipelines</strong> using Python and SQL to automate <strong>data ingestion, transformation, and loading</strong> from multiple business systems.</li>
-                    <li>Conducted <strong>exploratory data analysis (EDA)</strong> on customer behavior and sales performance datasets, uncovering patterns that improved campaign targeting by 20%.</li>
-                    <li>Created and deployed interactive dashboards in <strong>Power BI</strong> to <strong>visualize key business metrics</strong>, reducing report turnaround time by 40%.</li>
-                    <li>Designed and optimized complex <strong>SQL queries</strong> for ad hoc analysis, enabling teams to access insights faster and with improved accuracy.</li>
-                    <li>Implemented <strong>data cleaning and preprocessing routines</strong> using Pandas and NumPy to prepare structured datasets for analytical modeling.</li>
+                    <li>Coordinated service assignments for 20 part-time counselors and 100 client families, optimizing resource allocation.</li>
+                    <li>Oversaw daily activity and outing planning for 100 clients, ensuring safety and engagement.</li>
+                    <li>Assisted families of special needs clients with researching financial assistance and healthcare resources, providing critical information and support.</li>
+                    <li>Assisted teachers with managing daily classroom activities, contributing to a structured learning environment.</li>
+                    <li>Oversaw daily and special student activities, ensuring smooth operation and positive experiences.</li>
                 </ul>
             </div>
         </section>
 
-        <section class="projects">
-            <h2>Selected Projects</h2>
-            <div class="project-item">
-                <h3>Olympics Data Analysis</h3>
-                <ul>
-                    <li>Designed and executed <strong>ETL pipelines</strong> with <strong>Azure Data Factory</strong> and <strong>Databricks</strong>, improving <strong>data accuracy</strong> for analytics by 20%.</li>
-                    <li>Conducted complex <strong>SQL queries</strong> via <strong>Azure Synapse Analytics</strong> to identify key trends and patterns in Olympic data.</li>
-                </ul>
+        <section class="section">
+            <h2>Employment History</h2>
+            <div class="clear-fix">
+                <span class="job-title">Counseling Supervisor</span>, <span class="company-name">The Wesley Center</span>, Little Rock, Arkansas
+                <span class="date-range">1999-2002</span>
             </div>
-            <div class="project-item">
-                <h3>Breast Cancer Image Classification</h3>
-                <ul>
-                    <li>Developed a deep learning pipeline using ResNet and EfficientNet architectures to classify histopathology images for breast cancer detection.</li>
-                    <li>Applied transfer learning and fine-tuning techniques to improve model generalization and classification accuracy.</li>
-                    <li>Used TensorFlow and Keras to implement training workflows and evaluate model performance using confusion matrix and ROC-AUC.</li>
-                </ul>
+            <div class="clear-fix">
+                <span class="job-title">Client Specialist</span>, <span class="company-name">Rainbow Special Care Center</span>, Little Rock, Arkansas
+                <span class="date-range">1997-1999</span>
             </div>
-            <div class="project-item">
-                <h3>Credit Card Fraud Detection</h3>
-                <ul>
-                    <li>Implemented machine learning models including Logistic Regression, Random Forest, and XGBoost to classify fraudulent transactions in a highly imbalanced dataset.</li>
-                    <li>Applied data balancing using SMOTE and evaluated models using precision, recall, F1-score, and ROC-AUC to select the most reliable classifier.</li>
-                </ul>
+            <div class="clear-fix">
+                <span class="job-title">Teacher’s Assistant</span>, <span class="company-name">Cowell Elementary</span>, Conway, Arkansas
+                <span class="date-range">1996-1997</span>
             </div>
         </section>
 
-        <section class="education">
+        <section class="section">
             <h2>Education</h2>
             <div class="education-item">
-                <h3>Master’s in computer science <span style="float:right;">Aug 2024 – May 2026</span></h3>
-                <p><strong>Wichita State University</strong>, Wichita, KS</p>
-            </div>
-            <div class="education-item">
-                <h3>Bachelor of Technology – Computer Science and Engineering (AI ML) <span style="float:right;">Aug 2016 – May 2020</span></h3>
-                <p><strong>Vasireddy Venkatadri Institute of Technology</strong>, Guntur, India</p>
+                <h3>University of Arkansas at Little Rock, Little Rock, AR</h3>
+                <ul>
+                    <li>BS in Early Childhood Development (1999)</li>
+                    <li>BA in Elementary Education (1998)</li>
+                    <li>GPA (4.0 Scale): Early Childhood Development – 3.8, Elementary Education – 3.5, Overall 3.4.</li>
+                    <li>Dean’s List, Chancellor’s List</li>
+                </ul>
             </div>
         </section>
     </div>
