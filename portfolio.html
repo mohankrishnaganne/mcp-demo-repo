@@ -2,826 +2,494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="portfolio-generated-at" content="2026-07-29T01:40:33.702220">
+<meta name="portfolio-generated-at" content="2026-07-29T01:50:10.218850">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Srinivas Namburi's Professional Portfolio - AI Engineer, Data Engineer, Data Analyst specializing in LLM, ETL, Cloud, and Data Visualization.">
-    <meta name="author" content="Srinivas Namburi">
-    <meta name="generator" content="Portfolio Builder v1.0">
-    <meta name="last-updated" content="2026-07-29T01:40:33.702220">
-    <title>Srinivas Namburi - AI & Data Engineer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta name="generated-at" content="2026-07-29T01:50:10.218850">
+    <title>Sampath Kumar Muthyalapati - Full-stack Developer & Data Enthusiast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #007bff; /* Blue */
-            --secondary-color: #6c757d; /* Gray */
-            --accent-color: #28a745; /* Green */
-            --text-color: #343a40; /* Dark Gray */
-            --light-text-color: #6c757d;
-            --background-color: #f8f9fa; /* Light Gray */
-            --card-background: #ffffff;
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --accent-color: #28a745;
+            --background-light: #f8f9fa;
+            --background-dark: #ffffff;
+            --text-color: #343a40;
+            --heading-color: #212529;
             --border-color: #e9ecef;
-            --shadow-color: rgba(0, 0, 0, 0.08);
-            --font-family-heading: 'Poppins', sans-serif;
-            --font-family-body: 'Open Sans', sans-serif;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
         }
 
         body {
-            font-family: var(--font-family-body);
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
-            scroll-behavior: smooth;
+            background-color: var(--background-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 20px;
+            box-sizing: border-box;
         }
 
-        /* Header/Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--primary-color), #0056b3);
+        header {
+            background-color: var(--primary-color);
             color: #ffffff;
-            padding: 80px 20px;
+            padding: 60px 0;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            box-shadow: 0 4px 15px var(--shadow-medium);
+            width: 100%;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-            transform: rotate(45deg);
-            opacity: 0.3;
-        }
-
-        .hero h1 {
-            font-family: var(--font-family-heading);
-            font-size: 3.5em;
-            margin-bottom: 10px;
+        header h1 {
+            margin: 0;
+            font-size: 3.2em;
             font-weight: 700;
-            position: relative;
-            z-index: 1;
+            letter-spacing: -0.03em;
         }
 
-        .hero p {
+        header p {
             font-size: 1.4em;
-            margin-bottom: 30px;
+            margin-top: 10px;
             font-weight: 300;
-            position: relative;
-            z-index: 1;
+            opacity: 0.9;
         }
 
         .contact-info {
+            margin-top: 25px;
+            font-size: 1em;
             display: flex;
             justify-content: center;
             gap: 25px;
-            margin-top: 20px;
-            position: relative;
-            z-index: 1;
+            flex-wrap: wrap;
         }
 
         .contact-info a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.1em;
+            transition: color 0.3s ease;
             display: flex;
             align-items: center;
-            transition: color 0.3s ease;
+            gap: 8px;
         }
 
         .contact-info a:hover {
-            color: var(--accent-color);
+            color: #e0e0e0;
         }
 
-        .contact-info a i {
-            margin-right: 8px;
-            font-size: 1.2em;
+        .section {
+            background-color: var(--background-dark);
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px var(--shadow-light);
+            border-left: 5px solid var(--primary-color);
         }
 
-        /* Section Styling */
-        section {
-            padding: 60px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        section:last-of-type {
-            border-bottom: none;
-        }
-
-        h2 {
-            font-family: var(--font-family-heading);
-            font-size: 2.5em;
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
+        .section-title {
+            font-size: 2.2em;
+            color: var(--heading-color);
+            margin-bottom: 30px;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
             font-weight: 600;
+            letter-spacing: -0.02em;
         }
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: var(--accent-color);
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-
-        /* Professional Summary */
-        .summary-content {
+        .summary p {
             font-size: 1.1em;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            color: var(--light-text-color);
+            line-height: 1.8;
+            color: var(--text-color);
         }
 
-        /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
         }
 
         .skill-category {
-            background-color: var(--card-background);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 4px 15px var(--shadow-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            background-color: var(--background-light);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 5px var(--shadow-light);
         }
 
         .skill-category h3 {
-            font-family: var(--font-family-heading);
             color: var(--primary-color);
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
         }
 
         .skill-category ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
         }
 
         .skill-category li {
-            background-color: #e9f5ff; /* Light blue for tags */
+            background-color: #e9f5ff;
             color: var(--primary-color);
+            display: inline-block;
             padding: 8px 15px;
+            margin: 5px;
             border-radius: 20px;
             font-size: 0.9em;
-            font-weight: 600;
-            white-space: nowrap;
+            font-weight: 500;
+            border: 1px solid #cce0ff;
         }
 
-        /* Experience Timeline */
-        .timeline {
+        .experience-item, .project-item {
+            margin-bottom: 35px;
+            padding-left: 20px;
+            border-left: 4px solid var(--accent-color);
             position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
         }
 
-        .timeline::after {
+        .experience-item:last-child, .project-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-item::before, .project-item::before {
             content: '';
             position: absolute;
-            width: 4px;
-            background-color: var(--primary-color);
+            left: -9px;
             top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            padding: 20px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-            box-sizing: border-box;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
+            width: 14px;
+            height: 14px;
             background-color: var(--accent-color);
-            border: 4px solid var(--primary-color);
-            top: 30px;
             border-radius: 50%;
-            z-index: 1;
+            border: 2px solid var(--background-dark);
         }
 
-        .timeline-left {
-            left: 0;
+        .experience-item h3, .project-item h3 {
+            color: var(--heading-color);
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.5em;
+            font-weight: 600;
         }
 
-        .timeline-right {
-            left: 50%;
-        }
-
-        .timeline-right::after {
-            left: -10px;
-        }
-
-        .timeline-item .content {
-            padding: 25px;
-            background-color: var(--card-background);
-            position: relative;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px var(--shadow-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .timeline-item .content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .timeline-item h3 {
-            font-family: var(--font-family-heading);
+        .experience-item .role, .project-item .link {
             color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+            font-size: 1.1em;
+        }
+
+        .experience-item .duration, .project-item .technologies {
+            color: var(--secondary-color);
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .experience-item ul, .project-item ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .experience-item li, .project-item li {
+            margin-bottom: 8px;
+            color: var(--text-color);
+        }
+
+        .project-item .description {
+            margin-bottom: 10px;
+            font-style: italic;
+            color: var(--secondary-color);
+        }
+
+        .project-item .technologies span {
+            background-color: #e0f7fa;
+            color: #00796b;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .education-item {
+            margin-bottom: 25px;
+        }
+
+        .education-item h3 {
+            color: var(--heading-color);
             margin-top: 0;
             margin-bottom: 5px;
             font-size: 1.4em;
         }
 
-        .timeline-item h4 {
-            color: var(--accent-color);
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-            font-weight: 600;
+        .education-item p {
+            margin: 0;
+            color: var(--secondary-color);
         }
 
-        .timeline-item p.duration {
-            font-size: 0.9em;
-            color: var(--light-text-color);
-            margin-bottom: 15px;
-        }
-
-        .timeline-item ul {
-            padding-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        .timeline-item ul li {
-            margin-bottom: 8px;
-            font-size: 0.95em;
-        }
-
-        .timeline-item .tech-stack {
-            font-size: 0.85em;
-            color: var(--light-text-color);
-            font-style: italic;
-            margin-top: 15px;
-            border-top: 1px dashed var(--border-color);
-            padding-top: 10px;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .project-card {
-            background-color: var(--card-background);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px var(--shadow-color);
-            padding: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .project-card h3 {
-            font-family: var(--font-family-heading);
-            color: var(--primary-color);
-            font-size: 1.3em;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .project-card p {
-            font-size: 0.95em;
-            color: var(--light-text-color);
-        }
-
-        .project-card ul {
-            padding-left: 20px;
-            margin-top: 15px;
-            list-style: disc;
-        }
-
-        .project-card ul li {
-            margin-bottom: 5px;
-            font-size: 0.9em;
-        }
-
-        /* Education & Certifications */
-        .education-grid, .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .edu-card, .cert-card {
-            background-color: var(--card-background);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px var(--shadow-color);
-            padding: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .edu-card:hover, .cert-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-        }
-
-        .edu-card h3, .cert-card h3 {
-            font-family: var(--font-family-heading);
-            color: var(--primary-color);
-            font-size: 1.2em;
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-
-        .edu-card p, .cert-card p {
-            font-size: 0.95em;
-            color: var(--light-text-color);
-            margin-bottom: 5px;
-        }
-
-        .cert-card ul {
-            padding-left: 20px;
-            margin-top: 15px;
-            list-style: disc;
-        }
-
-        .cert-card ul li {
-            margin-bottom: 5px;
-            font-size: 0.9em;
-        }
-
-        /* Footer */
         footer {
-            background-color: var(--text-color);
-            color: #ffffff;
             text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9em;
-            margin-top: 50px;
-        }
-
-        footer .social-links {
-            margin-top: 15px;
-        }
-
-        footer .social-links a {
+            padding: 30px;
+            margin-top: 40px;
+            background-color: var(--heading-color);
             color: #ffffff;
-            font-size: 1.5em;
-            margin: 0 10px;
-            transition: color 0.3s ease;
+            width: 100%;
+            box-shadow: 0 -2px 10px var(--shadow-medium);
         }
 
-        footer .social-links a:hover {
-            color: var(--accent-color);
+        footer .contact-info {
+            margin-top: 0;
+            margin-bottom: 15px;
         }
 
-        /* Responsive Design */
+        footer .contact-info a {
+            color: #ffffff;
+        }
+
         @media (max-width: 768px) {
-            .hero h1 {
+            header h1 {
                 font-size: 2.5em;
             }
-            .hero p {
-                font-size: 1.1em;
+            header p {
+                font-size: 1.2em;
+            }
+            .section {
+                padding: 30px 20px;
+            }
+            .section-title {
+                font-size: 1.8em;
+            }
+            .skills-grid {
+                grid-template-columns: 1fr;
             }
             .contact-info {
                 flex-direction: column;
-                gap: 10px;
-            }
-            h2 {
-                font-size: 2em;
-            }
-            .skills-grid, .projects-grid, .education-grid, .certifications-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline::after {
-                left: 20px;
-            }
-            .timeline-item {
-                width: 100%;
-                padding-left: 50px;
-                padding-right: 20px;
-                left: 0;
-            }
-            .timeline-item::after {
-                left: 10px;
-            }
-            .timeline-right::after {
-                left: 10px;
-            }
-            .timeline-item.timeline-right {
-                left: 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero {
-                padding: 60px 15px;
-            }
-            .hero h1 {
-                font-size: 2em;
-            }
-            .hero p {
-                font-size: 1em;
-            }
-            .contact-info {
-                gap: 8px;
-            }
-            .contact-info a {
-                font-size: 1em;
-            }
-            h2 {
-                font-size: 1.8em;
-            }
-            .skill-category h3 {
-                font-size: 1.3em;
-            }
-            .skill-category li {
-                padding: 6px 12px;
-                font-size: 0.85em;
-            }
-            .timeline-item h3 {
-                font-size: 1.2em;
-            }
-            .timeline-item h4 {
-                font-size: 1em;
-            }
-            .timeline-item p.duration {
-                font-size: 0.85em;
-            }
-            .timeline-item ul li {
-                font-size: 0.9em;
-            }
-            .project-card h3 {
-                font-size: 1.1em;
-            }
-            .project-card p {
-                font-size: 0.9em;
+                gap: 15px;
             }
         }
     </style>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <main class="portfolio-shell">
   <div class="portfolio-card">
-<header class="hero">
+<header>
         <div class="container">
-            <h1>SAI SRINIVAS NAMBURI</h1>
-            <p>AI Engineer | Data Engineer | Data Analyst</p>
+            <h1>Sampath Kumar Muthyalapati</h1>
+            <p>Full-stack Developer | Data Analysis Enthusiast</p>
             <div class="contact-info">
-                <a href="tel:+13163762906"><i class="fas fa-phone"></i> +1 (316) 376-2906</a>
-                <a href="mailto:saisrinivas0311@gmail.com"><i class="fas fa-envelope"></i> saisrinivas0311@gmail.com</a>
-                <a href="https://github.com/mohankrishnaganne" target="_blank"><i class="fab fa-github"></i> mohankrishnaganne</a>
+                <a href="tel:+13163043795">+1 316 304 3795</a>
+                <a href="mailto:sampathkumarmuthyalapati@gmail.com">sampathkumarmuthyalapati@gmail.com</a>
+                <a href="https://www.linkedin.com/in/sampathkumarmuthyalapati" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/mohankrishnaganne" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
         </div>
     </header>
 
-    <main>
-        <section id="summary" class="container">
-            <h2>Professional Summary</h2>
-            <p class="summary-content">
-                Applied AI / GenAI Engineer with 5+ years of enterprise experience in automation, data platforms, and cloud-based solution delivery, now specializing in Large Language Model (LLM) applications and Generative AI systems. Hands-on experience building Retrieval-Augmented Generation (RAG) pipelines, prompt engineering workflows, and LLM-powered applications for knowledge automation and intelligent decision support. Proven background delivering scalable data validation, API-driven microservices, and streaming data solutions in healthcare and banking domains. Strong foundation in Python, SQL, Databricks, Kafka, and CI/CD with practical exposure to ML experimentation and evaluation. Skilled at collaborating with cross-functional teams and translating complex technical solutions into business impact.
+    <div class="container">
+        <section class="section summary">
+            <h2 class="section-title">Professional Summary</h2>
+            <p>
+                Highly motivated and results-driven Full-stack Developer with a strong foundation in modern web technologies, including React.js, Node.js, and Python.
+                Passionate about building intuitive and efficient applications, I bring hands-on experience in developing responsive user interfaces,
+                implementing robust backend solutions, and managing databases. My analytical mindset is further enhanced by foundational skills in data analysis
+                tools like Power BI, NumPy, and Pandas, alongside exposure to AWS services. I am eager to leverage my comprehensive technical skill set to
+                contribute to innovative projects and grow within a dynamic team, with a keen interest in exploring data-driven solutions.
             </p>
         </section>
 
-        <section id="skills" class="container">
-            <h2>Technical Skills</h2>
+        <section class="section skills">
+            <h2 class="section-title">Core Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Data Engineering & ETL</h3>
+                    <h3>Frontend</h3>
                     <ul>
-                        <li>Apache Kafka</li>
-                        <li>Apache Spark</li>
-                        <li>Databricks</li>
-                        <li>Delta Lake</li>
-                        <li>Airflow</li>
-                        <li>ETL/ELT</li>
-                        <li>PySpark</li>
-                        <li>SQL (T-SQL, PL/SQL)</li>
-                        <li>SSIS</li>
-                        <li>Data Validation</li>
-                        <li>Data Quality</li>
-                        <li>Data Orchestration</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap</li>
+                        <li>JavaScript</li>
+                        <li>React.js</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Cloud Platforms & DevOps</h3>
+                    <h3>Backend</h3>
                     <ul>
-                        <li>AWS (S3, Redshift, Glue, EMR, SageMaker, Bedrock, Lambda, EKS)</li>
-                        <li>Azure (Databricks, Synapse, AI Studio)</li>
-                        <li>GCP (Vertex AI, BigQuery)</li>
-                        <li>Docker</li>
-                        <li>Kubernetes</li>
-                        <li>Terraform</li>
-                        <li>CI/CD (Jenkins, Azure DevOps)</li>
+                        <li>Python</li>
+                        <li>Express.js</li>
+                        <li>Node.js</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Databases & Data Warehousing</h3>
+                    <h3>Databases</h3>
                     <ul>
-                        <li>FAISS</li>
-                        <li>Pinecone</li>
-                        <li>ChromaDB</li>
-                        <li>Vector DB</li>
+                        <li>SQLite</li>
                         <li>MongoDB</li>
-                        <li>PostgreSQL</li>
-                        <li>MySQL</li>
-                        <li>Oracle</li>
-                        <li>DB2</li>
-                        <li>Amazon Redshift</li>
-                        <li>Azure Synapse</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>AI/ML & Generative AI</h3>
-                    <ul>
-                        <li>LLM Fine-Tuning (QLoRA, GRPO, PEFT, RLHF)</li>
-                        <li>RAG Systems</li>
-                        <li>Prompt Engineering</li>
-                        <li>LangChain, LangGraph, LlamaIndex</li>
-                        <li>PyTorch, TensorFlow, Keras</li>
-                        <li>Hugging Face Transformers</li>
-                        <li>MLflow</li>
-                        <li>Kubeflow</li>
-                        <li>SageMaker</li>
-                        <li>Bedrock</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Programming & Scripting</h3>
-                    <ul>
-                        <li>Python (Expert)</li>
                         <li>SQL</li>
-                        <li>R</li>
-                        <li>Java</li>
-                        <li>Pandas</li>
-                        <li>NumPy</li>
-                        <li>SciPy</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>Data Analytics & Visualization</h3>
+                    <h3>Data Analysis & ML</h3>
                     <ul>
-                        <li>Tableau</li>
                         <li>Power BI</li>
-                        <li>Advanced Excel</li>
-                        <li>Streamlit</li>
-                        <li>SSRS</li>
-                        <li>Predictive Modeling</li>
-                        <li>Clustering, Classification</li>
+                        <li>NumPy</li>
+                        <li>Pandas</li>
+                        <li>Scikit-learn</li>
+                        <li>Machine Learning</li>
+                        <li>Microsoft Excel</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & Version Control</h3>
+                    <ul>
+                        <li>AWS (EC2, S3, Route53, CloudFront, IAM, Snapshots)</li>
+                        <li>Git Hub</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="container">
-            <h2>Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item timeline-right">
-                    <div class="content">
-                        <h3>AI Engineer – LLM Fine-Tuning & AI Security</h3>
-                        <h4>KeyBank | Remote</h4>
-                        <p class="duration">January 2025 – Present</p>
-                        <ul>
-                            <li>Designed and developed LLM-powered automation services, including natural-language-driven query and analysis tools for banking operations.</li>
-                            <li>Built Retrieval-Augmented Generation (RAG) pipelines using LangChain and vector databases for semantic search over banking documentation.</li>
-                            <li>Developed FastAPI-based services exposing LLM-powered endpoints for intelligent workflow assistance and knowledge retrieval.</li>
-                            <li>Implemented prompt engineering and response validation frameworks to improve LLM accuracy and ensure compliance with data governance standards.</li>
-                            <li>Integrated GenAI services with AWS cloud infrastructure using Docker-based deployments and CI/CD pipelines for controlled release and monitoring.</li>
-                            <li>Built data preprocessing and validation pipelines using Python and SQL to prepare structured banking datasets for LLM-assisted analytics.</li>
-                            <li>Implemented Kafka-based event validations to ensure reliable data ingestion for real-time banking transaction and notification workflows.</li>
-                            <li>Developed Streamlit-based interactive dashboards to demonstrate natural-language-to-SQL querying and AI-assisted root cause analysis.</li>
-                            <li>Collaborated with data, security, and compliance teams to align GenAI applications with banking risk, audit, and data protection requirements.</li>
-                        </ul>
-                        <p class="tech-stack"><strong>Tech Stack:</strong> Python, LangChain, OpenAI/AWS Bedrock APIs, Vector Databases (FAISS/Chroma), FastAPI, AWS, Kafka, SQL, Docker, CI/CD, Git.</p>
-                    </div>
-                </div>
+        <section class="section experience">
+            <h2 class="section-title">Work Experience</h2>
 
-                <div class="timeline-item timeline-left">
-                    <div class="content">
-                        <h3>AI Engineer</h3>
-                        <h4>National Institute for Aviation Research (NIAR) | Wichita, KS</h4>
-                        <p class="duration">January 2024 – December 2024</p>
-                        <ul>
-                            <li>Evaluated agentic AI frameworks (LangGraph, Autogen, Crew AI) to design multi-step LLM workflows for task automation and knowledge retrieval.</li>
-                            <li>Built Databricks-based ML experimentation pipelines using PySpark for feature generation and model prototyping in applied AI research.</li>
-                            <li>Implemented ML experiment tracking using MLflow, enabling reproducible model development and evaluation.</li>
-                            <li>Designed Retrieval-Augmented Generation (RAG) pipelines integrating LangChain with vector databases to improve response relevance for domain-specific Q&A.</li>
-                            <li>Built PySpark pipelines on Databricks for risk model feature generation, improving throughput by ~40% and registering features in Feature Store.</li>
-                            <li>Established model governance with MLflow Registry, Unity Catalog lineage, and CI/CD via Repos + Asset Bundles, cutting deployment errors by 32%.</li>
-                            <li>Implemented automated data validation (stat tests, DLT expectations) achieving 99.7% benchmark compliance and reducing inference latency by 58%.</li>
-                        </ul>
-                        <p class="tech-stack"><strong>Tech Stack:</strong> Python, LangChain, LangGraph, AutoGen, PySpark, Databricks, MLflow, Vector Databases, SHAP, Unity Catalog, CI/CD, Git.</p>
-                    </div>
-                </div>
+            <div class="experience-item">
+                <h3>Nxtwave</h3>
+                <span class="role">Teaching Assistant</span>
+                <span class="duration">Jun 2025 - Ongoing | Hyderabad, Telangana</span>
+                <ul>
+                    <li>Provided comprehensive guidance and resolved doubts for students across a spectrum of web development and programming technologies.</li>
+                    <li>Assisted students with front-end technologies (HTML, CSS, JavaScript, ReactJS) and back-end frameworks (Node.js, Express.js).</li>
+                    <li>Educated on server-side scripting using Python and relational database management with SQL, ensuring practical understanding.</li>
+                    <li>Troubleshot coding issues and explained core concepts to foster a clear and practical grasp of each technology.</li>
+                </ul>
+            </div>
 
-                <div class="timeline-item timeline-right">
-                    <div class="content">
-                        <h3>Data Scientist / Senior Data Scientist</h3>
-                        <h4>Cognizant | India</h4>
-                        <p class="duration">January 2021 – December 2023</p>
-                        <ul>
-                            <li>Designed and implemented Python and SQL-based data validation and orchestration frameworks for healthcare claims, enrollment, and provider data pipelines across relational (DB2, PostgreSQL) and distributed systems.</li>
-                            <li>Developed ETL and data reconciliation pipelines to validate transformation and movement of transactional healthcare data into analytical and reporting platforms.</li>
-                            <li>Implemented streaming data validation for Kafka-based event pipelines, ensuring schema consistency, message integrity, and accurate ingestion of EDI 834/837 healthcare transactions.</li>
-                            <li>Created automated data quality and profiling frameworks using SQL and custom scripts to ensure integrity of claims, provider, and member datasets.</li>
-                            <li>Integrated data validation pipelines into Azure DevOps CI/CD workflows, enabling continuous execution, monitoring, and reporting of data reliability checks.</li>
-                            <li>Developed cloud-based data validation environments using AWS services to support scalable execution of healthcare data verification pipelines.</li>
-                            <li>Led a team of engineers delivering scalable data validation solutions, providing technical guidance and workflow design.</li>
-                            <li>Collaborated with business, data, and engineering teams to design scalable data architectures and support modernization initiatives for AI-ready healthcare platforms.</li>
-                        </ul>
-                        <p class="tech-stack"><strong>Tech Stack:</strong> Python, SQL, DB2, PostgreSQL, ETL, Apache Kafka, REST APIs, AWS, Azure DevOps, Docker, Kubernetes, Git, Linux.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item timeline-left">
-                    <div class="content">
-                        <h3>Business Intelligence Analyst / Data Scientist</h3>
-                        <h4>Cybage Software private limited | India</h4>
-                        <p class="duration">February 2021 – December 2021</p>
-                        <ul>
-                            <li>Developed and optimized complex SQL (T-SQL, PL/SQL) queries and database objects, improving data retrieval performance for analytical reporting.</li>
-                            <li>Built cloud-scale ETL and data transformation pipelines using PySpark, SSIS, and Databricks to ingest, cleanse, and process large datasets from AWS S3 into Amazon Redshift and Azure Synapse.</li>
-                            <li>Modernized legacy Informatica PowerCenter workloads by converting mappings into distributed PySpark jobs for cloud-native data platforms.</li>
-                            <li>Implemented automated data validation and reconciliation frameworks using SQL and PySpark to ensure accuracy, consistency, and integrity of datasets.</li>
-                            <li>Orchestrated data pipelines using Apache Airflow and SQL Server Agent, enabling reliable scheduling, monitoring, and failure recovery of enterprise data workflows.</li>
-                            <li>Developed analytics-ready data marts and reporting layers, delivering SSRS reports and interactive BI dashboards using Power BI, Tableau, and Excel.</li>
-                            <li>Performed data quality checks, profiling, and automated unit/integration testing using PyTest and SQL-based test frameworks.</li>
-                            <li>Contributed to scalable and future-ready data architecture design, ensuring readiness for advanced analytics and AI-driven enterprise initiatives.</li>
-                        </ul>
-                        <p class="tech-stack"><strong>Tech Stack:</strong> SQL (T-SQL, PL/SQL), PySpark, Databricks, Apache Airflow, AWS (S3, Redshift), Azure Synapse, SSIS, Power BI, Tableau, REST APIs, Git, Linux.</p>
-                    </div>
-                </div>
+            <div class="experience-item">
+                <h3>Snagger India</h3>
+                <span class="role">Front End Developer</span>
+                <span class="duration">Jan 2024 – Feb 2024 | Hyderabad, Telangana</span>
+                <ul>
+                    <li>Developed a bidding system application using React.js, Redux Toolkit, and Bootstrap, optimizing for user experience and responsiveness.</li>
+                    <li>Utilized React component lifecycle methods to ensure seamless page transitions and efficient data handling within the application.</li>
+                    <li>Collaborated effectively with cross-functional teams to ensure smooth project execution and alignment with business objectives.</li>
+                    <li>Integrated Node.js for robust backend operations, facilitating dynamic data interactions and server-side logic.</li>
+                    <li>Enabled customers to efficiently select the most profitable vendor, significantly streamlining the contract allocation process.</li>
+                </ul>
             </div>
         </section>
 
-        <section id="projects" class="container">
-            <h2>Selected Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>WSDM Cup 2024 – LLM Evaluation (Top 10%)</h3>
-                    <p>Achieved top 10% ranking in an international competitive benchmark for LLM evaluation.</p>
-                    <ul>
-                        <li>Built LightGBM + Universal Sentence Encoder embeddings model for multilingual LLM response scoring.</li>
-                        <li>Fine-tuned DistilBERT with GAMMA 4-bit quantization.</li>
-                        <li>Implemented comprehensive evaluation metrics tracking model performance, latency, and memory efficiency.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Financial Domain RAG Assistant – Regulatory Compliance</h3>
-                    <p>Developed a production-grade RAG pipeline for financial disclosures and regulatory filings.</p>
-                    <ul>
-                        <li>Utilized FAISS embeddings for enterprise-scale document retrieval.</li>
-                        <li>Integrated LLM guardrails ensuring SEC/IRS compliance.</li>
-                        <li>Improved factual accuracy by 25% through systematic A/B testing.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>AI Security Red Teaming Framework</h3>
-                    <p>Designed a comprehensive framework for detecting critical AI security vulnerabilities.</p>
-                    <ul>
-                        <li>Identified prompt injection attacks, model denial of service, and information leakage vulnerabilities.</li>
-                        <li>Developed compliance scoring aligned with OWASP Top 10 for LLMs for enterprise deployments.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>Computer Vision Quality Inspection System</h3>
-                    <p>Developed an end-to-end deep learning pipeline for automated visual inspection.</p>
-                    <ul>
-                        <li>Utilized ResNet and EfficientNet architectures.</li>
-                        <li>Shipped production-grade system with optimized inference.</li>
-                        <li>Reduced manual inspection effort by 40%.</li>
-                    </ul>
-                </div>
+        <section class="section projects">
+            <h2 class="section-title">Key Projects</h2>
+
+            <div class="project-item">
+                <h3>Suby App (Food Ordering & Delivery)</h3>
+                <a href="https://swiggy-clone-react-mu.vercel.app" target="_blank" rel="noopener noreferrer" class="link">View Project</a>
+                <p class="description">A comprehensive food ordering and delivery application enabling multiple vendors to manage their offerings and customers to browse and order food.</p>
+                <span class="technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                    <span>Express.js</span>
+                    <span>MongoDB</span>
+                </span>
+                <ul>
+                    <li>Implemented a multi-vendor dashboard allowing vendors to add firm details, products, prices, offers, images, and descriptions.</li>
+                    <li>Developed customer-facing interface for browsing food items, viewing prices and offers, and placing orders.</li>
+                    <li>Designed and integrated a robust backend with Node.js and Express.js, utilizing MongoDB for efficient data storage and retrieval.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3>Tourism Website</h3>
+                <a href="https://tourismmsk.ccbp.tech" target="_blank" rel="noopener noreferrer" class="link">View Project</a>
+                <p class="description">A captivating online resource providing multimedia content and insightful details about popular travel spots.</p>
+                <span class="technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Bootstrap</span>
+                </span>
+                <ul>
+                    <li>Constructed a mobile-adaptive layout using HTML elements and CSS3 properties like background, flex, and CSS box model attributes.</li>
+                    <li>Integrated destination-specific image carousels and immersive virtual tour videos with Bootstrap components for enhanced user engagement.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3>Food Munch</h3>
+                <a href="https://mskfoodmunch.ccbp.tech" target="_blank" rel="noopener noreferrer" class="link">View Project</a>
+                <p class="description">A responsive website showcasing a comprehensive list of food items with a user-centric design.</p>
+                <span class="technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>Bootstrap</span>
+                </span>
+                <ul>
+                    <li>Designed with a user-centric approach, featuring HTML structure elements and Bootstrap components to ensure a seamless experience.</li>
+                    <li>Provided product videos for food items, available at the click of a button, offering a closer look for customers.</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <h3>Todos Application</h3>
+                <a href="https://msktodoapp.ccbp.tech" target="_blank" rel="noopener noreferrer" class="link">View Project</a>
+                <p class="description">A task management solution designed to streamline daily tasks and enhance productivity.</p>
+                <span class="technologies">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
+                </span>
+                <ul>
+                    <li>Streamlined task management through a combination of HTML, CSS, and Bootstrap for an intuitive user interface.</li>
+                    <li>Implemented seamless CRUD (Create, Read, Update, Delete) operations through JavaScript event listeners and dynamic UI updates.</li>
+                    <li>Ensured secure task persistence with local storage methods, guaranteeing task availability across sessions.</li>
+                </ul>
             </div>
         </section>
 
-        <section id="research" class="container">
-            <h2>Research Contributions</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Transformer-based NLP for Agricultural Applications</h3>
-                    <ul>
-                        <li>Conducted research on transformer-based NLP models.</li>
-                        <li>Published peer-reviewed contributions in agricultural domain applications.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>LLM Safety Evaluation & Guardrail Design</h3>
-                    <ul>
-                        <li>Contributing author on methodologies for LLM safety evaluation.</li>
-                        <li>Focused on guardrail design for regulated environments.</li>
-                    </ul>
-                </div>
-                <div class="project-card">
-                    <h3>AI Security Frameworks</h3>
-                    <ul>
-                        <li>Research contributions to AI security frameworks.</li>
-                        <li>Includes prompt injection detection and red teaming methodologies for enterprise LLM deployments.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <section class="section education">
+            <h2 class="section-title">Education</h2>
 
-        <section id="education" class="container">
-            <h2>Education & Certifications</h2>
-            <div class="education-grid">
-                <div class="edu-card">
-                    <h3>Master of Science in Business Analytics – Data Science Track</h3>
-                    <p>Wichita State University, Kansas</p>
-                </div>
-                <div class="edu-card">
-                    <h3>Bachelor of Technology in Mechanical Engineering</h3>
-                    <p>Lovely Professional University, India</p>
-                </div>
+            <div class="education-item">
+                <h3>Nxtwave Disruptive Technologies</h3>
+                <p>Industry Ready Certification in Full-stack Development</p>
+                <p>Jun 2022 - Ongoing</p>
             </div>
-            <div class="certifications-grid">
-                <div class="cert-card">
-                    <h3>Top 10% Finalist – WSDM Cup 2024 (LLM Evaluation Track)</h3>
-                    <p>International competitive benchmark for LLM evaluation.</p>
-                </div>
-                <div class="cert-card">
-                    <h3>Certified Data Scientist – Dell/NVIDIA GenAI Model Augmentation & Data Engineering Program</h3>
-                    <p>Certification in GenAI model augmentation and data engineering.</p>
-                </div>
-                <div class="cert-card">
-                    <h3>Meta Advanced Management Program</h3>
-                    <p>Leadership and technical management certification.</p>
-                </div>
-                <div class="cert-card">
-                    <h3>$10,000 Garvey Family Scholarship Recipient</h3>
-                    <p>Recognition for academic excellence and research potential.</p>
-                </div>
-                <div class="cert-card">
-                    <h3>Graduate Research Assistantships</h3>
-                    <ul>
-                        <li>NIAR (Aviation AI)</li>
-                        <li>Koch Global Trading Center (Financial ML Applications)</li>
-                    </ul>
-                </div>
+
+            <div class="education-item">
+                <h3>Vasireddy Venkatadri Institute of Technology, Guntur</h3>
+                <p>B.Tech (Bachelor of Technology) - Computer Science Engineering (CSE)</p>
+                <p>7.83 CGPA | 2020 - 2024</p>
             </div>
         </section>
-    </main>
+    </div>
 
     <footer>
         <div class="container">
-            <p>&copy; <span id="current-year"></span> Sai Srinivas Namburi. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/mohankrishnaganne" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="mailto:saisrinivas0311@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <div class="contact-info">
+                <a href="tel:+13163043795">+1 316 304 3795</a>
+                <a href="mailto:sampathkumarmuthyalapati@gmail.com">sampathkumarmuthyalapati@gmail.com</a>
+                <a href="https://www.linkedin.com/in/sampathkumarmuthyalapati" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/mohankrishnaganne" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
+            <p>&copy; 2024 Sampath Kumar Muthyalapati. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 
             <footer class="footer">
               <span><span class="accent-dot"></span>Available for data engineering and analytics opportunities</span>
