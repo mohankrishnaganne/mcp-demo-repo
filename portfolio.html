@@ -2,284 +2,472 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="portfolio-generated-at" content="2026-07-29T01:50:10.218850">
+<meta name="portfolio-generated-at" content="2026-07-29T01:58:29.249473">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generated-at" content="2026-07-29T01:50:10.218850">
+    <meta name="description" content="Sampath Kumar Muthyalapati's professional portfolio showcasing expertise in full-stack web development, data analysis, and cloud technologies.">
+    <meta name="author" content="Sampath Kumar Muthyalapati">
+    <meta name="generator" content="Portfolio Builder - 2026-07-29T01:58:29.249473">
     <title>Sampath Kumar Muthyalapati - Full-stack Developer & Data Enthusiast</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #007bff;
             --secondary-color: #6c757d;
             --accent-color: #28a745;
             --background-light: #f8f9fa;
-            --background-dark: #ffffff;
-            --text-color: #343a40;
-            --heading-color: #212529;
+            --background-dark: #343a40;
+            --text-color-dark: #212529;
+            --text-color-light: #f8f9fa;
+            --card-background: #ffffff;
             --border-color: #e9ecef;
             --shadow-light: rgba(0, 0, 0, 0.05);
-            --shadow-medium: rgba(0, 0, 0, 0.1);
+            --font-family-sans: 'Inter', sans-serif;
+            --font-family-mono: 'Roboto Mono', monospace;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: var(--font-family-sans);
             line-height: 1.6;
-            color: var(--text-color);
             margin: 0;
             padding: 0;
             background-color: var(--background-light);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            color: var(--text-color-dark);
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
         .container {
-            width: 100%;
-            max-width: 1000px;
-            margin: 20px auto;
-            padding: 0 20px;
-            box-sizing: border-box;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
         }
 
-        header {
-            background-color: var(--primary-color);
-            color: #ffffff;
-            padding: 60px 0;
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #0056b3);
+            color: var(--text-color-light);
+            padding: 4rem 2rem;
             text-align: center;
-            box-shadow: 0 4px 15px var(--shadow-medium);
-            width: 100%;
+            position: relative;
+            overflow: hidden;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 3.2em;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
             font-weight: 700;
-            letter-spacing: -0.03em;
+            position: relative;
+            z-index: 1;
         }
 
-        header p {
-            font-size: 1.4em;
-            margin-top: 10px;
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
             font-weight: 300;
-            opacity: 0.9;
+            position: relative;
+            z-index: 1;
         }
 
-        .contact-info {
-            margin-top: 25px;
-            font-size: 1em;
+        .hero .contact-info {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            gap: 1.5rem;
             flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
         }
 
-        .contact-info a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s ease;
+        .hero .contact-info a {
+            color: var(--text-color-light);
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 0.5rem;
+            transition: transform 0.2s ease-in-out;
         }
 
-        .contact-info a:hover {
-            color: #e0e0e0;
+        .hero .contact-info a:hover {
+            transform: translateY(-3px);
+            text-decoration: none;
         }
 
-        .section {
-            background-color: var(--background-dark);
-            padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px var(--shadow-light);
-            border-left: 5px solid var(--primary-color);
+        .hero .contact-info a svg {
+            fill: var(--text-color-light);
+            width: 20px;
+            height: 20px;
         }
 
-        .section-title {
-            font-size: 2.2em;
-            color: var(--heading-color);
-            margin-bottom: 30px;
-            border-bottom: 3px solid var(--primary-color);
-            padding-bottom: 10px;
+        /* Section Styling */
+        section {
+            padding: 4rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
             font-weight: 600;
-            letter-spacing: -0.02em;
         }
 
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Professional Summary */
         .summary p {
-            font-size: 1.1em;
-            line-height: 1.8;
-            color: var(--text-color);
+            font-size: 1.15rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            color: var(--text-color-dark);
         }
 
+        /* Skills Section */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
+            gap: 1.5rem;
+            margin-top: 2rem;
         }
 
         .skill-category {
-            background-color: var(--background-light);
-            padding: 20px;
+            background-color: var(--card-background);
             border-radius: 8px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 1px 5px var(--shadow-light);
+            box-shadow: 0 4px 12px var(--shadow-light);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
         }
 
         .skill-category h3 {
             color: var(--primary-color);
+            font-size: 1.4rem;
             margin-top: 0;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-            font-weight: 600;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
         }
 
         .skill-category ul {
             list-style: none;
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
         }
 
         .skill-category li {
             background-color: #e9f5ff;
-            color: var(--primary-color);
-            display: inline-block;
-            padding: 8px 15px;
-            margin: 5px;
+            color: #0056b3;
+            padding: 0.4rem 0.8rem;
             border-radius: 20px;
-            font-size: 0.9em;
-            font-weight: 500;
-            border: 1px solid #cce0ff;
+            font-size: 0.9rem;
+            font-weight: 600;
+            white-space: nowrap;
         }
 
-        .experience-item, .project-item {
-            margin-bottom: 35px;
-            padding-left: 20px;
-            border-left: 4px solid var(--accent-color);
+        /* Experience Timeline */
+        .timeline {
             position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1rem;
         }
 
-        .experience-item:last-child, .project-item:last-child {
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: var(--card-background);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item-left {
+            left: 0;
+        }
+
+        .timeline-item-right {
+            left: 50%;
+        }
+
+        .timeline-item-right::after {
+            left: -16px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: var(--card-background);
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-content h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+        }
+
+        .timeline-content h4 {
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .timeline-content ul {
+            padding-left: 1.2rem;
             margin-bottom: 0;
         }
 
-        .experience-item::before, .project-item::before {
-            content: '';
-            position: absolute;
-            left: -9px;
-            top: 0;
-            width: 14px;
-            height: 14px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-            border: 2px solid var(--background-dark);
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #444;
         }
 
-        .experience-item h3, .project-item h3 {
-            color: var(--heading-color);
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-size: 1.5em;
-            font-weight: 600;
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
-        .experience-item .role, .project-item .link {
+        .project-card {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px var(--shadow-light);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-card h3 {
             color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 5px;
-            display: block;
-            font-size: 1.1em;
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
         }
 
-        .experience-item .duration, .project-item .technologies {
+        .project-card p {
+            font-size: 0.95rem;
+            color: #555;
+            flex-grow: 1;
+        }
+
+        .project-card .technologies {
+            margin-top: 1rem;
+            font-size: 0.9rem;
             color: var(--secondary-color);
-            font-size: 0.95em;
-            margin-bottom: 15px;
-            display: block;
+            font-family: var(--font-family-mono);
         }
 
-        .experience-item ul, .project-item ul {
-            list-style: disc;
-            padding-left: 20px;
-            margin-top: 10px;
+        .project-card .project-links {
+            margin-top: 1rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
         }
 
-        .experience-item li, .project-item li {
-            margin-bottom: 8px;
-            color: var(--text-color);
+        .project-card .project-links a {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
         }
 
-        .project-item .description {
-            margin-bottom: 10px;
+        .project-card .project-links a:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+
+        /* Education Section */
+        .education-item {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px var(--shadow-light);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+
+        .education-item p {
+            margin: 0.25rem 0;
+            color: #555;
+        }
+
+        .education-item .degree {
+            font-weight: 600;
+            color: var(--text-color-dark);
+        }
+
+        .education-item .date {
             font-style: italic;
             color: var(--secondary-color);
         }
 
-        .project-item .technologies span {
-            background-color: #e0f7fa;
-            color: #00796b;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.85em;
-            margin-right: 8px;
-            margin-bottom: 5px;
-            display: inline-block;
-        }
-
-        .education-item {
-            margin-bottom: 25px;
-        }
-
-        .education-item h3 {
-            color: var(--heading-color);
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-size: 1.4em;
-        }
-
-        .education-item p {
-            margin: 0;
-            color: var(--secondary-color);
-        }
-
+        /* Footer */
         footer {
+            background-color: var(--background-dark);
+            color: var(--text-color-light);
             text-align: center;
-            padding: 30px;
-            margin-top: 40px;
-            background-color: var(--heading-color);
-            color: #ffffff;
-            width: 100%;
-            box-shadow: 0 -2px 10px var(--shadow-medium);
+            padding: 2rem;
+            font-size: 0.9rem;
         }
 
         footer .contact-info {
-            margin-top: 0;
-            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
         }
 
         footer .contact-info a {
-            color: #ffffff;
+            color: var(--text-color-light);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
+        footer .contact-info a svg {
+            fill: var(--text-color-light);
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
+            .hero h1 {
+                font-size: 2.5rem;
             }
-            header p {
-                font-size: 1.2em;
+            .hero p {
+                font-size: 1.2rem;
             }
-            .section {
-                padding: 30px 20px;
+            h2 {
+                font-size: 2rem;
             }
-            .section-title {
-                font-size: 1.8em;
+            .timeline::after {
+                left: 31px;
             }
-            .skills-grid {
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 0 10px 10px;
+                border-color: transparent transparent transparent #f8f9fa;
+            }
+            .timeline-item-left::after, .timeline-item-right::after {
+                left: 15px;
+            }
+            .timeline-item-right {
+                left: 0%;
+            }
+            .skills-grid, .projects-grid {
                 grid-template-columns: 1fr;
-            }
-            .contact-info {
-                flex-direction: column;
-                gap: 15px;
             }
         }
     </style>
@@ -287,207 +475,235 @@
 <body>
 <main class="portfolio-shell">
   <div class="portfolio-card">
-<header>
+<header class="hero">
         <div class="container">
             <h1>Sampath Kumar Muthyalapati</h1>
-            <p>Full-stack Developer | Data Analysis Enthusiast</p>
+            <p>Full-stack Developer & Data Enthusiast</p>
             <div class="contact-info">
-                <a href="tel:+13163043795">+1 316 304 3795</a>
-                <a href="mailto:sampathkumarmuthyalapati@gmail.com">sampathkumarmuthyalapati@gmail.com</a>
-                <a href="https://www.linkedin.com/in/sampathkumarmuthyalapati" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/mohankrishnaganne" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="tel:+13163043795">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C12.76 21 3 11.24 3 3.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"/></svg>
+                    +1 316 304 3795
+                </a>
+                <a href="mailto:sampathkumarmuthyalapati@gmail.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    sampathkumarmuthyalapati@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/sampathkumarmuthyalapati" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.395-2.535 7-2.353 7 2.795v6.44z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/mohankrishnaganne" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.197-6.091 8.197-11.387 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <section class="section summary">
-            <h2 class="section-title">Professional Summary</h2>
-            <p>
-                Highly motivated and results-driven Full-stack Developer with a strong foundation in modern web technologies, including React.js, Node.js, and Python.
-                Passionate about building intuitive and efficient applications, I bring hands-on experience in developing responsive user interfaces,
-                implementing robust backend solutions, and managing databases. My analytical mindset is further enhanced by foundational skills in data analysis
-                tools like Power BI, NumPy, and Pandas, alongside exposure to AWS services. I am eager to leverage my comprehensive technical skill set to
-                contribute to innovative projects and grow within a dynamic team, with a keen interest in exploring data-driven solutions.
-            </p>
-        </section>
-
-        <section class="section skills">
-            <h2 class="section-title">Core Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Bootstrap</li>
-                        <li>JavaScript</li>
-                        <li>React.js</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Express.js</li>
-                        <li>Node.js</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>SQLite</li>
-                        <li>MongoDB</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Data Analysis & ML</h3>
-                    <ul>
-                        <li>Power BI</li>
-                        <li>NumPy</li>
-                        <li>Pandas</li>
-                        <li>Scikit-learn</li>
-                        <li>Machine Learning</li>
-                        <li>Microsoft Excel</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & Version Control</h3>
-                    <ul>
-                        <li>AWS (EC2, S3, Route53, CloudFront, IAM, Snapshots)</li>
-                        <li>Git Hub</li>
-                    </ul>
-                </div>
+    <main>
+        <section id="summary" class="summary">
+            <div class="container">
+                <h2>Professional Summary</h2>
+                <p>
+                    A dedicated and results-driven Full-stack Developer with a strong foundation in modern web technologies and a keen interest in data analysis.
+                    Proficient in building responsive and scalable web applications using React.js, Node.js, Express.js, and various database systems.
+                    Experienced in leveraging Python for server-side scripting and data manipulation, complemented by skills in Power BI, NumPy, and Pandas for insightful data visualization and analysis.
+                    A collaborative team player with a proven ability to guide and mentor others, troubleshoot complex issues, and deliver high-quality solutions.
+                    Eager to apply a blend of development and analytical skills to create impactful digital experiences and derive actionable insights from data.
+                </p>
             </div>
         </section>
 
-        <section class="section experience">
-            <h2 class="section-title">Work Experience</h2>
-
-            <div class="experience-item">
-                <h3>Nxtwave</h3>
-                <span class="role">Teaching Assistant</span>
-                <span class="duration">Jun 2025 - Ongoing | Hyderabad, Telangana</span>
-                <ul>
-                    <li>Provided comprehensive guidance and resolved doubts for students across a spectrum of web development and programming technologies.</li>
-                    <li>Assisted students with front-end technologies (HTML, CSS, JavaScript, ReactJS) and back-end frameworks (Node.js, Express.js).</li>
-                    <li>Educated on server-side scripting using Python and relational database management with SQL, ensuring practical understanding.</li>
-                    <li>Troubleshot coding issues and explained core concepts to foster a clear and practical grasp of each technology.</li>
-                </ul>
-            </div>
-
-            <div class="experience-item">
-                <h3>Snagger India</h3>
-                <span class="role">Front End Developer</span>
-                <span class="duration">Jan 2024 – Feb 2024 | Hyderabad, Telangana</span>
-                <ul>
-                    <li>Developed a bidding system application using React.js, Redux Toolkit, and Bootstrap, optimizing for user experience and responsiveness.</li>
-                    <li>Utilized React component lifecycle methods to ensure seamless page transitions and efficient data handling within the application.</li>
-                    <li>Collaborated effectively with cross-functional teams to ensure smooth project execution and alignment with business objectives.</li>
-                    <li>Integrated Node.js for robust backend operations, facilitating dynamic data interactions and server-side logic.</li>
-                    <li>Enabled customers to efficiently select the most profitable vendor, significantly streamlining the contract allocation process.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section projects">
-            <h2 class="section-title">Key Projects</h2>
-
-            <div class="project-item">
-                <h3>Suby App (Food Ordering & Delivery)</h3>
-                <a href="https://swiggy-clone-react-mu.vercel.app" target="_blank" rel="noopener noreferrer" class="link">View Project</a>
-                <p class="description">A comprehensive food ordering and delivery application enabling multiple vendors to manage their offerings and customers to browse and order food.</p>
-                <span class="technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React.js</span>
-                    <span>Node.js</span>
-                    <span>Express.js</span>
-                    <span>MongoDB</span>
-                </span>
-                <ul>
-                    <li>Implemented a multi-vendor dashboard allowing vendors to add firm details, products, prices, offers, images, and descriptions.</li>
-                    <li>Developed customer-facing interface for browsing food items, viewing prices and offers, and placing orders.</li>
-                    <li>Designed and integrated a robust backend with Node.js and Express.js, utilizing MongoDB for efficient data storage and retrieval.</li>
-                </ul>
-            </div>
-
-            <div class="project-item">
-                <h3>Tourism Website</h3>
-                <a href="https://tourismmsk.ccbp.tech" target="_blank" rel="noopener noreferrer" class="link">View Project</a>
-                <p class="description">A captivating online resource providing multimedia content and insightful details about popular travel spots.</p>
-                <span class="technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Bootstrap</span>
-                </span>
-                <ul>
-                    <li>Constructed a mobile-adaptive layout using HTML elements and CSS3 properties like background, flex, and CSS box model attributes.</li>
-                    <li>Integrated destination-specific image carousels and immersive virtual tour videos with Bootstrap components for enhanced user engagement.</li>
-                </ul>
-            </div>
-
-            <div class="project-item">
-                <h3>Food Munch</h3>
-                <a href="https://mskfoodmunch.ccbp.tech" target="_blank" rel="noopener noreferrer" class="link">View Project</a>
-                <p class="description">A responsive website showcasing a comprehensive list of food items with a user-centric design.</p>
-                <span class="technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Bootstrap</span>
-                </span>
-                <ul>
-                    <li>Designed with a user-centric approach, featuring HTML structure elements and Bootstrap components to ensure a seamless experience.</li>
-                    <li>Provided product videos for food items, available at the click of a button, offering a closer look for customers.</li>
-                </ul>
-            </div>
-
-            <div class="project-item">
-                <h3>Todos Application</h3>
-                <a href="https://msktodoapp.ccbp.tech" target="_blank" rel="noopener noreferrer" class="link">View Project</a>
-                <p class="description">A task management solution designed to streamline daily tasks and enhance productivity.</p>
-                <span class="technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>Bootstrap</span>
-                </span>
-                <ul>
-                    <li>Streamlined task management through a combination of HTML, CSS, and Bootstrap for an intuitive user interface.</li>
-                    <li>Implemented seamless CRUD (Create, Read, Update, Delete) operations through JavaScript event listeners and dynamic UI updates.</li>
-                    <li>Ensured secure task persistence with local storage methods, guaranteeing task availability across sessions.</li>
-                </ul>
+        <section id="skills">
+            <div class="container">
+                <h2>Core Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend Development</h3>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript</li>
+                            <li>React.js</li>
+                            <li>Redux Toolkit</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend Development</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Node.js</li>
+                            <li>Express.js</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <ul>
+                            <li>SQLite</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Analysis & ML</h3>
+                        <ul>
+                            <li>Power BI</li>
+                            <li>NumPy</li>
+                            <li>Pandas</li>
+                            <li>Scikit-learn</li>
+                            <li>Machine Learning</li>
+                            <li>Microsoft Excel</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud Platforms</h3>
+                        <ul>
+                            <li>AWS EC2</li>
+                            <li>AWS S3</li>
+                            <li>AWS Route53</li>
+                            <li>AWS CloudFront</li>
+                            <li>AWS IAM</li>
+                            <li>AWS Snapshots</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Tools & Version Control</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>GitHub</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="section education">
-            <h2 class="section-title">Education</h2>
-
-            <div class="education-item">
-                <h3>Nxtwave Disruptive Technologies</h3>
-                <p>Industry Ready Certification in Full-stack Development</p>
-                <p>Jun 2022 - Ongoing</p>
-            </div>
-
-            <div class="education-item">
-                <h3>Vasireddy Venkatadri Institute of Technology, Guntur</h3>
-                <p>B.Tech (Bachelor of Technology) - Computer Science Engineering (CSE)</p>
-                <p>7.83 CGPA | 2020 - 2024</p>
+        <section id="experience">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Teaching Assistant</h3>
+                            <h4>Nxtwave</h4>
+                            <p class="date">Jun 2025 - Ongoing | Hyderabad, Telangana</p>
+                            <ul>
+                                <li>Provided comprehensive guidance and resolved doubts for students across a spectrum of web development and programming technologies.</li>
+                                <li>Assisted students with front-end technologies including HTML, CSS, JavaScript, and ReactJS, ensuring a strong grasp of core concepts.</li>
+                                <li>Supported learning in back-end frameworks such as Node.js and Express.js, and server-side scripting with Python.</li>
+                                <li>Guided students in understanding and implementing relational databases using SQL, troubleshooting coding issues, and fostering practical application.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Front End Developer</h3>
+                            <h4>Snagger India</h4>
+                            <p class="date">Jan 2024 – Feb 2024 | Hyderabad, Telangana</p>
+                            <ul>
+                                <li>Developed a dynamic bidding system application using React.js, Redux Toolkit, and Bootstrap, optimizing for a superior user experience.</li>
+                                <li>Implemented component lifecycle methods to ensure seamless page transitions and efficient data handling within the application.</li>
+                                <li>Collaborated effectively with cross-functional teams to guarantee smooth project execution and alignment with business objectives.</li>
+                                <li>Integrated Node.js for robust backend operations, facilitating efficient data flow and application functionality.</li>
+                                <li>Enabled customers to efficiently select the most profitable vendor, significantly streamlining the contract allocation process.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
-    </div>
+
+        <section id="projects">
+            <div class="container">
+                <h2>Key Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>Suby App (Food Ordering & Delivery)</h3>
+                        <p>
+                            A comprehensive food ordering and delivery application enabling multiple vendors to manage their offerings and customers to browse and order food.
+                            Vendors can log in to a dashboard to add firm details, products, prices, offers, images, descriptions, and location. Customers can view items and place orders based on preferences.
+                        </p>
+                        <div class="technologies">Technologies: HTML, CSS, JavaScript, React.js, Node.js, Express.js, MongoDB</div>
+                        <div class="project-links">
+                            <a href="https://swiggy-clone-react-mu.vercel.app" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Tourism Website</h3>
+                        <p>
+                            A captivating online resource providing users with multimedia content and insightful details about popular travel spots.
+                            Features a mobile-adaptive layout and integrates destination-specific image carousels and immersive virtual tour videos.
+                        </p>
+                        <div class="technologies">Technologies: HTML, CSS, Bootstrap</div>
+                        <div class="project-links">
+                            <a href="https://tourismmsk.ccbp.tech" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Food Munch</h3>
+                        <p>
+                            A responsive website showcasing a comprehensive list of food items, designed with a user-centric approach.
+                            Features HTML structure elements and Bootstrap components for a seamless experience, including product videos.
+                        </p>
+                        <div class="technologies">Technologies: HTML, CSS, Bootstrap</div>
+                        <div class="project-links">
+                            <a href="https://mskfoodmunch.ccbp.tech" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Todos Application</h3>
+                        <p>
+                            A task management solution designed for ease of use, streamlining task management through an intuitive interface.
+                            Enables seamless CRUD operations via JavaScript event listeners and dynamic UI updates, with secure task persistence using local storage.
+                        </p>
+                        <div class="technologies">Technologies: HTML, CSS, JavaScript, Bootstrap</div>
+                        <div class="project-links">
+                            <a href="https://msktodoapp.ccbp.tech" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Nxtwave Disruptive Technologies</h3>
+                    <p class="degree">Industry Ready Certification in Full-stack Development</p>
+                    <p class="date">Jun 2022 - Ongoing</p>
+                </div>
+                <div class="education-item">
+                    <h3>Vasireddy Venkatadri Institute of Technology, Guntur</h3>
+                    <p class="degree">B.Tech (Bachelor of Technology) - Computer Science Engineering (CSE)</p>
+                    <p>CGPA: 7.83</p>
+                    <p class="date">2020 - 2024</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="container">
             <div class="contact-info">
-                <a href="tel:+13163043795">+1 316 304 3795</a>
-                <a href="mailto:sampathkumarmuthyalapati@gmail.com">sampathkumarmuthyalapati@gmail.com</a>
-                <a href="https://www.linkedin.com/in/sampathkumarmuthyalapati" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/mohankrishnaganne" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="tel:+13163043795">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C12.76 21 3 11.24 3 3.5c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.46.57 3.57.11.35.03.74-.24 1.02l-2.2 2.2z"/></svg>
+                    +1 316 304 3795
+                </a>
+                <a href="mailto:sampathkumarmuthyalapati@gmail.com">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    sampathkumarmuthyalapati@gmail.com
+                </a>
+                <a href="https://linkedin.com/in/sampathkumarmuthyalapati" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.395-2.535 7-2.353 7 2.795v6.44z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/mohankrishnaganne" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.197-6.091 8.197-11.387 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
             </div>
-            <p>&copy; 2024 Sampath Kumar Muthyalapati. All rights reserved.</p>
+            <p>&copy; 2026 Sampath Kumar Muthyalapati. All rights reserved.</p>
         </div>
     </footer>
 
