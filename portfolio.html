@@ -1,451 +1,298 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="portfolio-generated-at" content="2026-07-29T01:59:17.746906">
+<meta name="portfolio-generated-at" content="2026-07-29T19:06:55.663722">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generated-at" content="2026-07-29T01:59:17.746906">
-    <title>Sai Srinivas Namburi - Data & AI Engineer Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <title>John W. Smith - Senior Data Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of John W. Smith, a Senior Data Engineer specializing in modern data stack technologies, ETL, and data visualization.">
+    <meta name="generator" content="AI Portfolio Builder - 2026-07-29T19:06:55.663722">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #007bff; /* A vibrant blue for accents */
-            --secondary-color: #6c757d; /* Muted grey for secondary text */
-            --text-color: #343a40; /* Dark grey for main text */
-            --background-color: #f8f9fa; /* Light grey background */
-            --card-background: #ffffff; /* White for cards/sections */
-            --border-color: #e9ecef; /* Light border for separation */
+            --primary-color: #007bff;
+            --secondary-color: #6c757d;
+            --accent-color: #28a745;
+            --background-light: #f8f9fa;
+            --background-dark: #343a40;
+            --text-color: #333;
+            --text-light: #fff;
+            --card-background: #ffffff;
+            --border-color: #e9ecef;
             --shadow-light: rgba(0, 0, 0, 0.05);
-            --shadow-medium: rgba(0, 0, 0, 0.1);
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background-color: var(--background-color);
+            background-color: var(--background-light);
             margin: 0;
             padding: 0;
-            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
 
-        header {
-            background: var(--card-background);
-            padding: 40px 20px;
+        .hero-section {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 60px 20px;
             text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            box-shadow: 0 2px 10px var(--shadow-light);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 4px 15px var(--shadow-light);
         }
 
-        header h1 {
+        .hero-section h1 {
+            margin: 0 0 10px;
             font-size: 3em;
-            margin-bottom: 10px;
-            color: var(--primary-color);
             font-weight: 700;
         }
 
-        header p {
-            font-size: 1.2em;
-            color: var(--secondary-color);
+        .hero-section p {
+            font-size: 1.4em;
+            font-weight: 300;
             margin-bottom: 20px;
         }
 
         .contact-info {
             display: flex;
             justify-content: center;
-            gap: 20px;
             flex-wrap: wrap;
-            font-size: 0.95em;
+            gap: 20px;
+            margin-top: 25px;
+            font-size: 1.1em;
         }
 
-        .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--text-color);
-        }
-
-        .contact-info a {
-            color: var(--primary-color);
+        .contact-info span, .contact-info a {
+            color: var(--text-light);
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .contact-info a:hover {
-            text-decoration: underline;
+            color: rgba(255, 255, 255, 0.8);
         }
 
-        section {
-            padding: 60px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        section:last-of-type {
-            border-bottom: none;
-        }
-
-        h2 {
-            font-size: 2.5em;
-            color: var(--primary-color);
-            text-align: center;
-            margin-bottom: 40px;
-            font-weight: 600;
-            position: relative;
-        }
-
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--primary-color);
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-
-        .hero-summary {
-            background: var(--card-background);
-            padding: 40px;
+        .section {
+            background-color: var(--card-background);
+            padding: 30px;
+            margin-bottom: 25px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px var(--shadow-light);
-            text-align: center;
-            font-size: 1.15em;
+            box-shadow: 0 2px 10px var(--shadow-light);
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 2em;
+            margin-top: 0;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .summary-text {
+            font-size: 1.1em;
             line-height: 1.8;
-            margin-top: -20px; /* Pulls it up slightly into the header area */
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .skill-category {
-            background: var(--card-background);
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px var(--shadow-light);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px var(--shadow-medium);
-        }
-
-        .skill-category h3 {
-            color: var(--primary-color);
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 10px;
-        }
-
-        .skill-category ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-category li {
-            background: var(--background-color);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-            color: var(--text-color);
-            border: 1px solid var(--border-color);
-            white-space: nowrap;
-        }
-
-        .skill-category li.highlight {
-            background-color: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        .experience-timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px 0;
-        }
-
-        .experience-timeline::before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            background-color: var(--primary-color);
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -2px;
-            border-radius: 2px;
-        }
-
-        .timeline-item {
-            padding: 20px 0;
-            position: relative;
-            width: 50%;
-        }
-
-        .timeline-item:nth-child(odd) {
-            left: 0;
-            padding-right: 40px;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) {
-            left: 50%;
-            padding-left: 40px;
-            text-align: left;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: var(--primary-color);
-            border: 4px solid var(--card-background);
-            top: 28px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .timeline-item:nth-child(odd)::after {
-            right: -10px;
-        }
-
-        .timeline-item:nth-child(even)::after {
-            left: -10px;
-        }
-
-        .timeline-content {
-            background: var(--card-background);
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px var(--shadow-light);
-            position: relative;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .timeline-content:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px var(--shadow-medium);
-        }
-
-        .timeline-content h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-            font-size: 1.5em;
-        }
-
-        .timeline-content h4 {
-            color: var(--secondary-color);
-            font-size: 1.1em;
-            margin-bottom: 10px;
-        }
-
-        .timeline-content p.dates {
-            font-size: 0.9em;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        .timeline-content ul {
-            list-style: disc;
-            padding-left: 20px;
-            margin: 0;
-        }
-
-        .timeline-content ul li {
-            margin-bottom: 8px;
-            font-size: 0.95em;
-        }
-
-        .timeline-content .tech-stack {
-            font-family: 'Roboto Mono', monospace;
-            font-size: 0.85em;
-            color: var(--secondary-color);
-            margin-top: 15px;
-            border-top: 1px dashed var(--border-color);
-            padding-top: 10px;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .project-card {
-            background: var(--card-background);
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px var(--shadow-light);
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px var(--shadow-medium);
-        }
-
-        .project-card h3 {
-            color: var(--primary-color);
-            font-size: 1.4em;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .project-card ul {
-            list-style: disc;
-            padding-left: 20px;
-            margin: 0;
-            font-size: 0.95em;
-        }
-
-        .education-item, .certification-item {
-            background: var(--card-background);
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px var(--shadow-light);
-            margin-bottom: 20px;
-            transition: transform 0.2s ease-in-out;
-        }
-
-        .education-item:hover, .certification-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px var(--shadow-medium);
-        }
-
-        .education-item h3, .certification-item h3 {
-            color: var(--primary-color);
-            font-size: 1.4em;
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-
-        .education-item p, .certification-item p {
-            margin: 0;
-            color: var(--secondary-color);
-            font-size: 0.95em;
-        }
-
-        .research-list {
-            list-style: disc;
-            padding-left: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
             margin-top: 20px;
         }
 
-        .research-list li {
-            margin-bottom: 10px;
+        .skill-item {
+            background-color: var(--background-light);
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-item {
+            margin-bottom: 30px;
+            padding-left: 20px;
+            border-left: 4px solid var(--accent-color);
+            position: relative;
+        }
+
+        .experience-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            border: 2px solid var(--card-background);
+        }
+
+        .job-title {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .duration {
             font-size: 0.95em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .experience-item ul li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .experience-item ul li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .project-item h3 {
+            font-size: 1.3em;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .project-item p {
+            margin-bottom: 10px;
+        }
+
+        .project-item strong {
+            color: var(--secondary-color);
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .degree {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .university {
+            font-size: 1.1em;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+
+        .education-item ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .education-item ul li {
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .education-item ul li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-size: 1.1em;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
 
         footer {
-            background: var(--text-color);
-            color: white;
             text-align: center;
-            padding: 30px 20px;
+            padding: 30px;
+            margin-top: 40px;
+            background-color: var(--background-dark);
+            color: var(--text-light);
             font-size: 0.9em;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
-        footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-            header h1 {
+            .hero-section h1 {
                 font-size: 2.5em;
             }
-            header p {
-                font-size: 1em;
+            .hero-section p {
+                font-size: 1.2em;
             }
             .contact-info {
                 flex-direction: column;
                 gap: 10px;
             }
-            h2 {
-                font-size: 2em;
-            }
-            .hero-summary {
-                padding: 30px;
-                font-size: 1em;
-            }
             .skills-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
             }
-            .experience-timeline::before {
-                left: 20px;
-            }
-            .timeline-item {
-                width: 100%;
-                padding-left: 60px;
-                padding-right: 20px;
-                text-align: left;
-            }
-            .timeline-item:nth-child(odd) {
-                left: 0;
-                padding-right: 20px; /* Reset padding */
-                text-align: left;
-            }
-            .timeline-item:nth-child(even) {
-                left: 0; /* Align all to left */
-                padding-left: 60px;
-            }
-            .timeline-item::after {
-                left: 10px;
-                top: 28px;
-            }
-            .timeline-item:nth-child(odd)::after {
-                left: 10px; /* Align all dots to left */
-                right: auto;
-            }
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2em;
-            }
-            header p {
-                font-size: 0.9em;
-            }
-            .hero-summary {
+            .section {
                 padding: 20px;
             }
-            .skill-category li {
-                font-size: 0.85em;
-                padding: 6px 12px;
-            }
-            .timeline-content h3 {
-                font-size: 1.3em;
-            }
-            .timeline-content h4 {
-                font-size: 1em;
-            }
-            .timeline-content ul li {
-                font-size: 0.9em;
+            .section h2 {
+                font-size: 1.8em;
             }
         }
     </style>
@@ -453,284 +300,126 @@
 <body>
 <main class="portfolio-shell">
   <div class="portfolio-card">
-<header>
+<header class="hero-section">
         <div class="container">
-            <h1>SAI SRINIVAS NAMBURI</h1>
-            <p>Applied AI / GenAI Engineer | Data Engineering & Analytics Specialist</p>
+            <h1>John W. Smith</h1>
+            <p>Senior Data Engineer | ETL & Analytics Specialist</p>
             <div class="contact-info">
-                <span>Wichita, KS</span>
-                <span>+1 (316) 376-2906</span>
-                <span><a href="mailto:saisrinivas0311@gmail.com">saisrinivas0311@gmail.com</a></span>
+                <span>2002 Front Range Way Fort Collins, CO 80525</span>
+                <span>jwsmith@colostate.edu</span>
                 <span><a href="https://github.com/mohankrishnaganne" target="_blank" rel="noopener noreferrer">GitHub: mohankrishnaganne</a></span>
             </div>
         </div>
     </header>
 
-    <section id="summary" class="container">
-        <div class="hero-summary">
-            <p>An Applied AI / GenAI Engineer with 5+ years of enterprise experience in automation, data platforms, and cloud-based solution delivery, now specializing in Large Language Model (LLM) applications and Generative AI systems. Proven expertise in building Retrieval-Augmented Generation (RAG) pipelines, prompt engineering workflows, and LLM-powered applications for knowledge automation and intelligent decision support. Strong background in delivering scalable data validation, API-driven microservices, and streaming data solutions, with a deep focus on <strong>ETL, data analytics, and visualization</strong> in healthcare and banking domains. Proficient in Python, SQL, Databricks, Kafka, and CI/CD, with practical exposure to ML experimentation and evaluation. Adept at collaborating with cross-functional teams to translate complex technical solutions into impactful business outcomes.</p>
-        </div>
-    </section>
+    <main class="container">
+        <section id="summary" class="section">
+            <h2>Professional Summary</h2>
+            <p class="summary-text">Highly skilled and results-driven Senior Data Engineer with 4+ years of experience in designing, developing, and optimizing robust data pipelines and analytical solutions. Proficient in the modern data stack, including AWS, Apache Spark, Apache Kafka, Apache Airflow, Databricks, Snowflake, and dbt. Proven ability to transform complex raw data into actionable insights, enhance data quality, and build scalable data infrastructure to support business intelligence and machine learning initiatives.</p>
+        </section>
 
-    <section id="skills" class="container">
-        <h2>Core Skills & Modern Data Stack</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Programming & Data Languages</h3>
+        <section id="skills" class="section">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Data Engineering</div>
+                <div class="skill-item">ETL/ELT</div>
+                <div class="skill-item">Data Modeling</div>
+                <div class="skill-item">Data Warehousing</div>
+                <div class="skill-item">Data Analytics</div>
+                <div class="skill-item">Cloud Platforms (AWS)</div>
+                <div class="skill-item">Apache Spark</div>
+                <div class="skill-item">Apache Kafka</div>
+                <div class="skill-item">Apache Airflow</div>
+                <div class="skill-item">Databricks</div>
+                <div class="skill-item">Snowflake</div>
+                <div class="skill-item">dbt (data build tool)</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Power BI / Tableau</div>
+                <div class="skill-item">AWS S3, EC2, RDS</div>
+                <div class="skill-item">Data Governance</div>
+                <div class="skill-item">Performance Tuning</div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+                <div class="job-title">Senior Data Engineer</div>
+                <div class="company">Resideo</div>
+                <div class="duration">2020 – Present</div>
                 <ul>
-                    <li class="highlight">Python (Expert)</li>
-                    <li class="highlight">SQL</li>
-                    <li>R</li>
-                    <li>Java</li>
-                    <li>Pandas</li>
-                    <li>NumPy</li>
-                    <li>SciPy</li>
-                    <li class="highlight">PySpark</li>
+                    <li>Engineered and optimized scalable ETL pipelines using <strong>Python, Apache Spark, and AWS Glue</strong> for ingesting terabytes of raw data from diverse sources (IoT devices, transactional databases, APIs) into a centralized <strong>Snowflake</strong> data warehouse.</li>
+                    <li>Designed and implemented robust data models and transformations with <strong>dbt (data build tool)</strong>, ensuring data integrity, consistency, and readiness for analytical consumption and machine learning initiatives.</li>
+                    <li>Orchestrated complex data workflows and dependencies using <strong>Apache Airflow</strong>, significantly reducing data latency and improving data freshness for critical business reports and dashboards.</li>
+                    <li>Developed real-time data streaming solutions leveraging <strong>Apache Kafka</strong> for high-throughput event processing, enabling immediate insights and operational decision-making.</li>
+                    <li>Managed and optimized cloud-based data infrastructure on <strong>AWS (S3, EC2, RDS)</strong>, ensuring high availability, security, and cost-efficiency of data platforms.</li>
+                    <li>Collaborated with data scientists and business analysts to understand data requirements, deliver custom datasets, and build interactive <strong>Power BI/Tableau</strong> dashboards for key stakeholders.</li>
                 </ul>
             </div>
-            <div class="skill-category">
-                <h3>Data Engineering & Databases</h3>
+
+            <div class="experience-item">
+                <div class="job-title">Data Analyst / Junior Data Engineer</div>
+                <div class="company">Tech Solutions Inc.</div>
+                <div class="duration">2018 – 2020</div>
                 <ul>
-                    <li class="highlight">Apache Kafka</li>
-                    <li class="highlight">Apache Spark</li>
-                    <li class="highlight">Databricks</li>
-                    <li>Delta Lake</li>
-                    <li class="highlight">Airflow</li>
-                    <li>ETL/ELT</li>
-                    <li>FAISS</li>
-                    <li>Pinecone</li>
-                    <li>ChromaDB</li>
-                    <li>Vector DB</li>
-                    <li>MongoDB</li>
-                    <li>PostgreSQL</li>
-                    <li>MySQL</li>
-                    <li>Oracle</li>
+                    <li>Developed and maintained complex <strong>SQL</strong> queries and stored procedures for data extraction, transformation, and loading (ETL) from various relational databases (PostgreSQL, MySQL).</li>
+                    <li>Created and automated daily, weekly, and monthly reports using <strong>Python scripts and Pandas</strong> for data manipulation, providing insights into customer behavior and product performance.</li>
+                    <li>Designed and implemented interactive dashboards in <strong>Tableau</strong> to visualize key business metrics, enabling data-driven decisions across sales and marketing teams.</li>
+                    <li>Performed data quality assessments and implemented validation rules to ensure accuracy and reliability of analytical datasets.</li>
+                    <li>Assisted in the migration of on-premise data systems to cloud-based solutions, gaining exposure to <strong>AWS S3 and Redshift</strong>.</li>
                 </ul>
             </div>
-            <div class="skill-category">
-                <h3>Cloud & MLOps</h3>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Key Projects</h2>
+
+            <div class="project-item">
+                <h3>Real-time IoT Data Pipeline for Smart Home Devices</h3>
+                <p>Designed and implemented a scalable data pipeline to ingest, process, and store real-time sensor data from smart home devices. Utilized <strong>Apache Kafka</strong> for high-throughput data ingestion, <strong>Apache Spark Streaming on Databricks</strong> for real-time processing and anomaly detection, and stored processed data in <strong>Snowflake</strong> for analytical querying. This enabled immediate insights into device performance and user behavior.</p>
+                <p><strong>Technologies:</strong> Kafka, Spark Streaming, Databricks, Snowflake, Python, AWS S3</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Customer Churn Prediction Data Mart</h3>
+                <p>Developed a comprehensive data mart using <strong>dbt (data build tool)</strong> and <strong>Snowflake</strong>, integrating customer demographic, transactional, and interaction data from various source systems. The project involved creating robust data models, implementing complex transformations, and ensuring data quality to support machine learning models for predicting customer churn, leading to targeted retention strategies.</p>
+                <p><strong>Technologies:</strong> dbt, Snowflake, SQL, Airflow, Python</p>
+            </div>
+
+            <div class="project-item">
+                <h3>Automated Marketing Campaign Performance Dashboard</h3>
+                <p>Built an end-to-end ETL process with <strong>Apache Airflow</strong> and <strong>Python</strong> to collect marketing campaign data from various APIs (Google Ads, Facebook Ads), transform it, and load it into a data warehouse. Developed an interactive dashboard in <strong>Power BI</strong> to visualize campaign performance metrics, ROI, and audience engagement, providing marketing teams with self-service analytics capabilities.</p>
+                <p><strong>Technologies:</strong> Airflow, Python, Pandas, SQL, Power BI, AWS RDS</p>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+
+            <div class="education-item">
+                <div class="degree">BS in Early Childhood Development (1999)</div>
+                <div class="university">University of Arkansas at Little Rock, Little Rock, AR</div>
                 <ul>
-                    <li class="highlight">AWS (SageMaker, Bedrock, S3, Lambda, EKS, EMR, Redshift, Glue)</li>
-                    <li class="highlight">Azure (Databricks, AI Studio, Synapse)</li>
-                    <li>GCP (Vertex AI, BigQuery)</li>
-                    <li>Docker</li>
-                    <li>Kubernetes</li>
-                    <li>Terraform</li>
-                    <li>End-to-End ML Pipelines</li>
-                    <li>Kubeflow</li>
-                    <li>MLflow</li>
-                    <li>Model Monitoring</li>
-                    <li>CI/CD (Jenkins, Azure DevOps)</li>
+                    <li>GPA: 3.8</li>
+                    <li>Dean’s List, Chancellor’s List</li>
                 </ul>
             </div>
-            <div class="skill-category">
-                <h3>Machine Learning & GenAI</h3>
+
+            <div class="education-item">
+                <div class="degree">BA in Elementary Education (1998)</div>
+                <div class="university">University of Arkansas at Little Rock, Little Rock, AR</div>
                 <ul>
-                    <li>Deep Learning</li>
-                    <li>Neural Networks</li>
-                    <li>Transformers</li>
-                    <li>LLM Fine-Tuning (QLoRA, GRPO, PEFT, RLHF)</li>
-                    <li class="highlight">RAG Systems</li>
-                    <li>Model Evaluation</li>
-                    <li>Prompt Engineering</li>
-                    <li>OpenAI GPT-4o</li>
-                    <li>Llama</li>
-                    <li>LangChain</li>
-                    <li>LangGraph</li>
-                    <li>Scikit-learn</li>
-                    <li>XGBoost</li>
+                    <li>GPA: 3.5</li>
                 </ul>
             </div>
-            <div class="skill-category">
-                <h3>Data Visualization & BI</h3>
-                <ul>
-                    <li class="highlight">Tableau</li>
-                    <li class="highlight">Power BI</li>
-                    <li>Advanced Excel (Power Query, Pivot Tables, VBA)</li>
-                    <li>SSRS</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="experience" class="container">
-        <h2>Professional Experience</h2>
-        <div class="experience-timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>AI Engineer – LLM Fine-Tuning & AI Security</h3>
-                    <h4>KeyBank | Remote</h4>
-                    <p class="dates">January 2025 – Present</p>
-                    <ul>
-                        <li>Designed and developed LLM-powered automation services to support banking operations, including natural-language-driven query and analysis tools for internal support teams.</li>
-                        <li>Built Retrieval-Augmented Generation (RAG) pipelines using <strong>LangChain</strong> and vector databases to enable semantic search over banking policy, onboarding, and transaction documentation.</li>
-                        <li>Developed <strong>FastAPI</strong>-based services exposing LLM-powered endpoints for intelligent workflow assistance and knowledge retrieval.</li>
-                        <li>Implemented prompt engineering and response validation frameworks to improve LLM accuracy, reduce hallucinations, and ensure compliance with internal data governance standards.</li>
-                        <li>Integrated GenAI services with <strong>AWS</strong> cloud infrastructure using <strong>Docker</strong>-based deployments and CI/CD pipelines for controlled release and monitoring.</li>
-                        <li>Built data preprocessing and validation pipelines using <strong>Python</strong> and <strong>SQL</strong> to prepare structured banking datasets for LLM-assisted analytics and automation use cases.</li>
-                        <li>Implemented <strong>Kafka</strong>-based event validations to ensure reliable data ingestion for real-time banking transaction and notification workflows.</li>
-                        <li>Developed <strong>Streamlit</strong>-based interactive dashboards to demonstrate natural-language-to-SQL querying and AI-assisted root cause analysis for operational teams.</li>
-                        <li>Collaborated with data, security, and compliance teams to ensure GenAI applications aligned with banking risk, audit, and data protection requirements.</li>
-                    </ul>
-                    <p class="tech-stack">Tech Stack: Python, LangChain, OpenAI/AWS Bedrock APIs, Vector Databases (FAISS/Chroma), FastAPI, AWS, Kafka, SQL, Docker, CI/CD, Git.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>AI Engineer</h3>
-                    <h4>National Institute for Aviation Research (NIAR) | Wichita, KS</h4>
-                    <p class="dates">January 2024 – December 2024</p>
-                    <ul>
-                        <li>Evaluated agentic AI frameworks including <strong>LangGraph, Autogen, and Crew AI</strong> to design multi-step LLM workflows for task automation and knowledge retrieval.</li>
-                        <li>Built <strong>Databricks</strong>-based ML experimentation pipelines using <strong>PySpark</strong> for feature generation and model prototyping as part of applied AI research projects.</li>
-                        <li>Implemented ML experiment tracking using <strong>MLflow</strong>, enabling reproducible model development and evaluation across multiple training runs.</li>
-                        <li>Designed Retrieval-Augmented Generation (RAG) pipelines integrating <strong>LangChain</strong> with vector databases to improve response relevance for domain-specific question answering.</li>
-                        <li>Resolved 500+ guardrails incidents (auth retries, chunking, regex backtracking) and codified policies into Mosaic AI guardrails + UC-managed secrets.</li>
-                        <li>Built <strong>PySpark</strong> pipelines on <strong>Databricks</strong> for risk model feature generation, improved throughput ~40% and registered features in Feature Store.</li>
-                        <li>Established model governance with <strong>MLflow Registry</strong> (staging-prod), Unity Catalog lineage, and CI/CD via Repos + Asset Bundles cutting deployment errors by 32%.</li>
-                        <li>Implemented automated validation (stat tests, SHAP, drift checks) and DLT expectations, achieved 99.7% benchmark compliance and reduced inference latency by 58% via containerized serving.</li>
-                        <li>Applied ensemble methods and SHAP for stability, promoted models through UC-controlled registries with approval gates and automated rollback.</li>
-                    </ul>
-                    <p class="tech-stack">Tech Stack: Python, LangChain, LangGraph, AutoGen, PySpark, Databricks, MLflow, Vector Databases, SHAP, Unity Catalog, CI/CD, Git.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Data Scientist / Senior Data Scientist</h3>
-                    <h4>Cognizant | India</h4>
-                    <p class="dates">January 2021 – December 2023</p>
-                    <ul>
-                        <li>Designed and implemented <strong>Python</strong> and <strong>SQL</strong>-based data validation and orchestration frameworks to verify healthcare claims, enrollment, and provider data pipelines across relational (DB2, PostgreSQL) and distributed systems.</li>
-                        <li>Built API-driven data validation services to ensure integrity of microservices handling patient eligibility, claim submission, and remittance workflows, improving reliability of enterprise healthcare platforms.</li>
-                        <li>Developed <strong>ETL</strong> and data reconciliation pipelines to validate transformation and movement of transactional healthcare data from operational systems into analytical and reporting platforms.</li>
-                        <li>Implemented streaming data validation for <strong>Kafka</strong>-based event pipelines, ensuring schema consistency, message integrity, and accurate ingestion of EDI 834/837 healthcare transactions.</li>
-                        <li>Created automated data quality and profiling frameworks using <strong>SQL</strong> and custom scripts to ensure integrity of claims, provider, and member datasets across multi-environment deployments.</li>
-                        <li>Integrated data validation pipelines into <strong>Azure DevOps CI/CD</strong> workflows, enabling continuous execution, monitoring, and reporting of data reliability checks.</li>
-                        <li>Developed cloud-based data validation environments using <strong>AWS</strong> services to support scalable execution of healthcare data and service verification pipelines.</li>
-                        <li>Led a team of engineers delivering scalable data validation solutions, providing technical guidance, code reviews, and workflow design for enterprise healthcare systems.</li>
-                        <li>Collaborated with business, data, and engineering teams to gather requirements, design scalable data architectures, and support modernization initiatives for AI-ready healthcare platforms.</li>
-                    </ul>
-                    <p class="tech-stack">Tech Stack: Python, SQL, DB2, PostgreSQL, ETL, Apache Kafka, REST APIs, AWS, Azure DevOps, Docker, Kubernetes, Git, Linux.</p>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <h3>Business Intelligence Analyst / Data Scientist</h3>
-                    <h4>Cybage Software private limited | India</h4>
-                    <p class="dates">February 2021 – December 2021</p>
-                    <ul>
-                        <li>Developed and optimized complex <strong>SQL</strong> (T-SQL, PL/SQL) queries and database objects (tables, views, stored procedures, UDFs), improving data retrieval performance and enabling scalable analytical reporting.</li>
-                        <li>Built cloud-scale <strong>ETL</strong> and data transformation pipelines using <strong>PySpark, SSIS, and Databricks</strong> to ingest, cleanse, and process large datasets from <strong>AWS S3</strong> into <strong>Amazon Redshift</strong> and <strong>Azure Synapse</strong>.</li>
-                        <li>Modernized legacy Informatica PowerCenter workloads by converting mappings into distributed <strong>PySpark</strong> jobs, ensuring compatibility with cloud-native data platforms.</li>
-                        <li>Implemented automated data validation and reconciliation frameworks using <strong>SQL</strong> and <strong>PySpark</strong> to ensure accuracy, consistency, and integrity of datasets across multi-environment deployments.</li>
-                        <li>Orchestrated data pipelines using <strong>Apache Airflow</strong> and SQL Server Agent, enabling reliable scheduling, monitoring, and failure recovery of enterprise data workflows.</li>
-                        <li>Designed and deployed optimized SSIS packages applying indexing, partitioning, and transaction isolation strategies to enhance ETL throughput and scalability.</li>
-                        <li>Developed analytics-ready data marts and reporting layers, delivering SSRS reports and dashboards supporting daily, weekly, and monthly business operations.</li>
-                        <li>Created interactive BI dashboards using <strong>Power BI, Tableau</strong>, and Excel (Power Query, Pivot Tables, VBA) to provide real-time operational and financial insights.</li>
-                        <li>Performed data quality checks, profiling, and automated unit/integration testing using PyTest and SQL-based test frameworks to ensure trustworthiness of business-critical data assets.</li>
-                        <li>Collaborated with business and technical stakeholders to gather requirements, prepare high-level design documentation, and deliver data platform enhancements in Agile environments using JIRA and Confluence.</li>
-                        <li>Supported API-based data access services to expose curated datasets for downstream applications, analytics, and AI/ML model consumption.</li>
-                        <li>Contributed to scalable and future-ready data architecture design, ensuring readiness for advanced analytics and AI-driven enterprise initiatives.</li>
-                    </ul>
-                    <p class="tech-stack">Tech Stack: SQL (T-SQL, PL/SQL), PySpark, Databricks, Apache Airflow, AWS (S3, Redshift), Azure Synapse, SSIS, Power BI, Tableau, REST APIs, Git, Linux.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="container">
-        <h2>Selected Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>WSDM Cup 2024 – LLM Evaluation (Top 10%)</h3>
-                <ul>
-                    <li>Built LightGBM + Universal Sentence Encoder embeddings model for multilingual LLM response scoring.</li>
-                    <li>Fine-tuned DistilBERT with GAMMA 4-bit quantization achieving top 10% ranking among international competitors.</li>
-                    <li>Implemented comprehensive evaluation metrics tracking model performance, latency, and memory efficiency.</li>
-                </ul>
-            </div>
-            <div class="project-card">
-                <h3>Financial Domain RAG Assistant – Regulatory Compliance</h3>
-                <ul>
-                    <li>Built production RAG pipeline over financial disclosures and regulatory filings using FAISS embeddings for enterprise-scale document retrieval.</li>
-                    <li>Integrated LLM guardrails ensuring SEC/IRS compliance, improving factual accuracy by 25% through systematic A/B testing.</li>
-                </ul>
-            </div>
-            <div class="project-card">
-                <h3>AI Security Red Teaming Framework</h3>
-                <ul>
-                    <li>Developed comprehensive framework for detecting prompt injection attacks, model denial of service, and information leakage vulnerabilities.</li>
-                    <li>Designed compliance scoring aligned with OWASP Top 10 for LLMs for enterprise deployments.</li>
-                </ul>
-            </div>
-            <div class="project-card">
-                <h3>Computer Vision Quality Inspection System</h3>
-                <ul>
-                    <li>Developed end-to-end deep learning pipeline using ResNet and EfficientNet architectures for automated visual inspection.</li>
-                    <li>Shipped production-grade system with optimized inference, reducing manual inspection effort by 40%.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="research" class="container">
-        <h2>Research Contributions</h2>
-        <ul class="research-list">
-            <li>Research on transformer-based NLP models for agricultural domain applications with peer-reviewed contributions.</li>
-            <li>Contributing author on LLM safety evaluation methodologies and guardrail design for regulated environments.</li>
-            <li>Research contributions to AI security frameworks including prompt injection detection and red teaming methodologies for enterprise LLM deployments.</li>
-        </ul>
-    </section>
-
-    <section id="education" class="container">
-        <h2>Education</h2>
-        <div class="education-item">
-            <h3>Master of Science in Business Analytics – Data Science Track</h3>
-            <p>Wichita State University, Kansas</p>
-        </div>
-        <div class="education-item">
-            <h3>Bachelor of Technology in Mechanical Engineering</h3>
-            <p>Lovely Professional University, India</p>
-        </div>
-    </section>
-
-    <section id="certifications" class="container">
-        <h2>Certifications & Awards</h2>
-        <div class="certification-item">
-            <h3>Top 10% Finalist – WSDM Cup 2024 (LLM Evaluation Track)</h3>
-            <p>International competitive benchmark for LLM evaluation.</p>
-        </div>
-        <div class="certification-item">
-            <h3>Certified Data Scientist – Dell/NVIDIA GenAI Model Augmentation & Data Engineering Program</h3>
-            <p>Certification in GenAI Model Augmentation & Data Engineering.</p>
-        </div>
-        <div class="certification-item">
-            <h3>Meta Advanced Management Program</h3>
-            <p>Leadership and technical management certification.</p>
-        </div>
-        <div class="certification-item">
-            <h3>$10,000 Garvey Family Scholarship Recipient</h3>
-            <p>Academic excellence and research potential recognition.</p>
-        </div>
-        <div class="certification-item">
-            <h3>Graduate Research Assistantships</h3>
-            <p>NIAR (Aviation AI) & Koch Global Trading Center (Financial ML Applications).</p>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; <span id="current-year"></span> Sai Srinivas Namburi. All rights reserved.</p>
-            <p>Built with <span style="color: #e25555;">&hearts;</span> for a modern data career.</p>
-        </div>
+        <p>&copy; 2024 John W. Smith. All rights reserved.</p>
     </footer>
-
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
 
             <footer class="footer">
               <span><span class="accent-dot"></span>Available for data engineering and analytics opportunities</span>
@@ -745,3 +434,4 @@
 </main>
 </body>
 </html>
+```
