@@ -1,94 +1,82 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="portfolio-generated-at" content="2026-07-29T19:46:41.309940">
+<meta name="portfolio-generated-at" content="2026-08-01T12:20:24.399262">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>John W. Smith - Data Engineer & Analyst Portfolio</title>
-    <!-- Generated: 2026-07-29T19:46:41.309940 -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+    <meta name="description" content="John W. Smith - Data Engineer & Analyst Portfolio">
+    <meta name="timestamp" content="2026-08-01T12:20:24.399262">
+    <title>John W. Smith - Data Engineer & Analyst</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght=400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #007bff;
-            --secondary-color: #6c757d;
-            --accent-color: #28a745;
-            --background-color: #f8f9fa;
-            --text-color: #343a40;
-            --light-text-color: #6c757d;
+            --primary-color: #007bff; /* Blue */
+            --secondary-color: #6c757d; /* Gray */
+            --accent-color: #28a745; /* Green */
+            --text-color: #343a40; /* Dark Gray */
+            --bg-light: #f8f9fa; /* Light Gray */
+            --bg-white: #ffffff;
             --border-color: #e9ecef;
-            --card-background: #ffffff;
-            --shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            --shadow-light: rgba(0, 0, 0, 0.05);
         }
 
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
         }
 
         .container {
-            width: 100%;
             max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            box-sizing: border-box;
         }
 
         header {
-            background: linear-gradient(135deg, #007bff, #0056b3);
-            color: #ffffff;
-            padding: 80px 20px;
+            background: var(--primary-color);
+            color: var(--bg-white);
+            padding: 60px 0;
             text-align: center;
-            border-bottom-left-radius: 15px;
-            border-bottom-right-radius: 15px;
-            box-shadow: var(--shadow);
-            margin-bottom: 40px;
+            box-shadow: 0 4px 8px var(--shadow-light);
         }
 
         header h1 {
-            margin: 0;
+            font-family: 'Montserrat', sans-serif;
             font-size: 3.5em;
+            margin-bottom: 10px;
             font-weight: 700;
-            letter-spacing: -1px;
         }
 
         header p {
-            font-size: 1.4em;
-            margin-top: 10px;
+            font-size: 1.5em;
             font-weight: 300;
+            margin-top: 0;
         }
 
-        .summary {
-            max-width: 800px;
-            margin: 30px auto 0;
-            font-size: 1.1em;
-            line-height: 1.8;
-            font-weight: 300;
-        }
-
-        section {
-            background-color: var(--card-background);
+        .section {
+            background: var(--bg-white);
             padding: 40px;
-            margin-bottom: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
+            margin: 30px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px var(--shadow-light);
         }
 
-        h2 {
-            color: var(--primary-color);
+        .section h2 {
+            font-family: 'Montserrat', sans-serif;
             font-size: 2.2em;
-            margin-bottom: 30px;
+            color: var(--primary-color);
+            margin-bottom: 25px;
             text-align: center;
             position: relative;
             padding-bottom: 10px;
         }
 
-        h2::after {
+        .section h2::after {
             content: '';
             position: absolute;
             left: 50%;
@@ -100,64 +88,51 @@
             border-radius: 2px;
         }
 
+        /* Professional Summary */
+        .summary p {
+            font-size: 1.1em;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-color);
+        }
+
+        /* Core Skills */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
             margin-top: 30px;
         }
 
-        .skill-category {
-            background-color: var(--background-color);
-            padding: 20px;
-            border-radius: 8px;
+        .skill-item {
+            background-color: var(--bg-light);
             border: 1px solid var(--border-color);
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
-        .skill-category h3 {
-            color: var(--primary-color);
-            font-size: 1.3em;
-            margin-top: 0;
-            margin-bottom: 15px;
-            border-bottom: 1px dashed var(--border-color);
-            padding-bottom: 10px;
+        .skill-item:hover {
+            transform: translateY(-5px);
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+            border-color: var(--primary-color);
         }
 
-        .skill-category ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .skill-category li {
-            margin-bottom: 8px;
-            font-size: 0.95em;
-            display: flex;
-            align-items: center;
-        }
-
-        .skill-category li::before {
-            content: '•';
-            color: var(--accent-color);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            margin-right: 0.5em;
-        }
-
-        .experience-timeline {
+        /* Experience Timeline */
+        .timeline {
             position: relative;
             padding: 20px 0;
-            max-width: 900px;
-            margin: 0 auto;
         }
 
-        .experience-timeline::before {
+        .timeline::before {
             content: '';
             position: absolute;
             left: 50%;
-            top: 0;
             width: 2px;
             height: 100%;
             background: var(--border-color);
@@ -177,40 +152,29 @@
 
         .timeline-item-content {
             width: 45%;
-            padding: 25px;
-            background-color: var(--background-color);
+            padding: 20px;
+            background: var(--bg-white);
             border-radius: 8px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px var(--shadow-light);
             position: relative;
         }
 
         .timeline-item:nth-child(even) .timeline-item-content {
-            margin-right: 5%;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-item-content {
-            margin-left: 5%;
+            text-align: right;
         }
 
         .timeline-item-content h3 {
+            font-family: 'Montserrat', sans-serif;
             color: var(--primary-color);
             margin-top: 0;
             margin-bottom: 5px;
             font-size: 1.4em;
         }
 
-        .timeline-item-content .role {
-            font-weight: 600;
-            color: var(--text-color);
-            margin-bottom: 5px;
-        }
-
-        .timeline-item-content .duration {
+        .timeline-item-content p.duration {
             font-style: italic;
-            color: var(--light-text-color);
+            color: var(--secondary-color);
             margin-bottom: 15px;
-            display: block;
         }
 
         .timeline-item-content ul {
@@ -219,164 +183,159 @@
             margin: 0;
         }
 
-        .timeline-item-content li {
+        .timeline-item-content ul li {
             margin-bottom: 10px;
             position: relative;
             padding-left: 20px;
         }
 
-        .timeline-item-content li::before {
+        .timeline-item-content ul li::before {
             content: '•';
             color: var(--accent-color);
-            font-weight: bold;
             position: absolute;
             left: 0;
-            top: 0;
+            font-size: 1.2em;
+            line-height: 1;
         }
 
-        .timeline-dot {
+        .timeline-item-dot {
             position: absolute;
             left: 50%;
-            top: 15px;
-            transform: translateX(-50%);
+            top: 20px;
             width: 16px;
             height: 16px;
-            background-color: var(--accent-color);
+            background: var(--accent-color);
             border-radius: 50%;
-            border: 3px solid var(--card-background);
+            transform: translateX(-50%);
             z-index: 1;
+            border: 2px solid var(--bg-white);
         }
 
-        .education-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed var(--border-color);
-        }
-
-        .education-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .education-details {
-            flex-grow: 1;
-        }
-
-        .education-details h3 {
-            margin: 0;
-            color: var(--primary-color);
-            font-size: 1.3em;
-        }
-
-        .education-details p {
-            margin: 5px 0;
-            color: var(--light-text-color);
-        }
-
-        .education-details ul {
-            list-style: none;
-            padding: 0;
-            margin: 10px 0 0;
-        }
-
-        .education-details li {
-            margin-bottom: 5px;
-            position: relative;
-            padding-left: 15px;
-            font-size: 0.95em;
-        }
-
-        .education-details li::before {
-            content: '•';
-            color: var(--accent-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        .contact-info {
-            text-align: center;
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             margin-top: 30px;
         }
 
-        .contact-info p {
-            margin: 10px 0;
-            font-size: 1.1em;
+        .project-card {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px var(--shadow-light);
+            overflow: hidden;
+            transition: transform 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card-content {
+            padding: 20px;
+        }
+
+        .project-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        .project-card p {
+            font-size: 0.95em;
+            color: var(--text-color);
+        }
+
+        .project-card .skills-used {
+            margin-top: 15px;
+            font-size: 0.85em;
+            color: var(--secondary-color);
+        }
+
+        /* Education & Contact */
+        .education-contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .education-item, .contact-info {
+            background-color: var(--bg-light);
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 8px var(--shadow-light);
+        }
+
+        .education-item h3, .contact-info h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+
+        .education-item p, .contact-info p {
+            margin-bottom: 8px;
         }
 
         .contact-info a {
             color: var(--primary-color);
             text-decoration: none;
-            font-weight: 600;
+            transition: color 0.2s ease;
         }
 
         .contact-info a:hover {
-            text-decoration: underline;
+            color: var(--accent-color);
         }
 
         footer {
             text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-            color: var(--light-text-color);
+            padding: 30px;
+            margin-top: 50px;
+            background-color: var(--primary-color);
+            color: var(--bg-white);
             font-size: 0.9em;
-            border-top: 1px solid var(--border-color);
-            width: 100%;
-            box-sizing: border-box;
+            box-shadow: 0 -2px 8px var(--shadow-light);
         }
 
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            header {
-                padding: 60px 20px;
-            }
-
             header h1 {
                 font-size: 2.5em;
             }
-
             header p {
                 font-size: 1.2em;
             }
-
-            .summary {
-                font-size: 1em;
+            .section {
+                padding: 25px;
+                margin: 20px 0;
             }
-
-            h2 {
+            .section h2 {
                 font-size: 1.8em;
             }
-
-            .experience-timeline::before {
+            .timeline::before {
                 left: 10px;
             }
-
             .timeline-item {
                 flex-direction: column;
-                align-items: flex-start;
             }
-
             .timeline-item-content {
                 width: 100%;
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                padding: 20px;
+                text-align: left !important;
+                padding: 15px;
             }
-
-            .timeline-dot {
+            .timeline-item-dot {
                 left: 10px;
                 transform: translateX(-50%);
             }
-
-            .timeline-item:nth-child(even) .timeline-item-content {
-                margin-left: 30px; /* Offset for the line */
-            }
             .timeline-item:nth-child(odd) .timeline-item-content {
-                margin-left: 30px; /* Offset for the line */
+                margin-left: 20px;
+            }
+            .timeline-item:nth-child(even) .timeline-item-content {
+                margin-left: 20px;
+            }
+            .education-contact-grid, .projects-grid, .skills-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -388,117 +347,127 @@
         <div class="container">
             <h1>John W. Smith</h1>
             <p>Data Engineer | Data Analyst | ETL Specialist</p>
-            <div class="summary">
-                <p>Highly skilled Data Engineer and Analyst with 4+ years of experience in designing, building, and optimizing robust data pipelines, data warehouses, and analytical solutions. Proficient in leveraging the modern data stack to transform raw data into actionable insights, driving informed decision-making and operational efficiency.</p>
-            </div>
         </div>
     </header>
 
     <main class="container">
-        <section id="skills">
+        <section id="summary" class="section summary">
+            <h2>Professional Summary</h2>
+            <p>
+                Highly analytical and results-driven professional with a foundational understanding of data management and process optimization, eager to transition and apply strong analytical skills to the data engineering and analytics domain. Proven ability to manage complex datasets, coordinate resources, and derive insights from information to improve operational efficiency and decision-making. Seeking to leverage a keen eye for detail and a structured approach to data challenges within a modern data stack environment.
+            </p>
+        </section>
+
+        <section id="skills" class="section">
             <h2>Core Skills</h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming & Databases</h3>
-                    <ul>
-                        <li>Python (Pandas, NumPy)</li>
-                        <li>SQL (PostgreSQL, MySQL)</li>
-                        <li>Scala</li>
-                        <li>NoSQL (MongoDB)</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & Big Data</h3>
-                    <ul>
-                        <li>AWS (S3, EC2, Glue, Lambda, Redshift, Kinesis)</li>
-                        <li>Apache Spark</li>
-                        <li>Apache Kafka</li>
-                        <li>Databricks</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Data Warehousing & ETL</h3>
-                    <ul>
-                        <li>Snowflake</li>
-                        <li>AWS Redshift</li>
-                        <li>Apache Airflow</li>
-                        <li>dbt (data build tool)</li>
-                        <li>AWS Glue</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>BI & Tools</h3>
-                    <ul>
-                        <li>Tableau</li>
-                        <li>Power BI</li>
-                        <li>Looker</li>
-                        <li>Git/GitHub</li>
-                        <li>Jira</li>
-                    </ul>
-                </div>
+                <div class="skill-item">Data Modeling</div>
+                <div class="skill-item">ETL Development</div>
+                <div class="skill-item">Data Warehousing</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Python (Pandas, NumPy)</div>
+                <div class="skill-item">AWS (S3, EC2, Redshift)</div>
+                <div class="skill-item">Apache Spark</div>
+                <div class="skill-item">Apache Kafka</div>
+                <div class="skill-item">Apache Airflow</div>
+                <div class="skill-item">Databricks</div>
+                <div class="skill-item">Snowflake</div>
+                <div class="skill-item">dbt (data build tool)</div>
+                <div class="skill-item">Data Visualization</div>
+                <div class="skill-item">Business Intelligence</div>
+                <div class="skill-item">Data Governance</div>
+                <div class="skill-item">Cloud Computing</div>
             </div>
         </section>
 
-        <section id="experience">
-            <h2>Professional Experience</h2>
-            <div class="experience-timeline">
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-item-dot"></div>
                     <div class="timeline-item-content">
-                        <h3>The Wesley Center</h3>
-                        <span class="role">Lead Data Engineer</span>
-                        <span class="duration">Little Rock, Arkansas | 1999 – 2002</span>
+                        <h3>Counseling Supervisor</h3>
+                        <p class="duration">The Wesley Center, Little Rock, Arkansas | 1999-2002</p>
                         <ul>
-                            <li>Led the design and implementation of robust ETL pipelines using Apache Spark and AWS Glue, processing large-scale client interaction and service utilization data.</li>
-                            <li>Architected and managed a Snowflake data warehouse, optimizing data models for performance and scalability, supporting real-time analytics and reporting.</li>
-                            <li>Developed and maintained data orchestration workflows with Apache Airflow, ensuring timely and reliable data delivery across various downstream systems.</li>
-                            <li>Implemented dbt for data transformation, creating modular and testable data models to enhance data quality and governance.</li>
-                            <li>Collaborated with cross-functional teams to define data requirements, translating complex business problems into scalable data solutions.</li>
-                            <li>Mentored junior data engineers and analysts, fostering a culture of data excellence and continuous improvement.</li>
+                            <li>Designed and managed data-driven service assignment protocols for 20 counselors and 100 client families, optimizing resource allocation and tracking service delivery metrics.</li>
+                            <li>Monitored and analyzed daily activity and outing engagement data for 100 clients, identifying trends to enhance program effectiveness and client satisfaction.</li>
+                            <li>Facilitated data collection and analysis to assist families in researching financial assistance and healthcare options, streamlining access to critical resources.</li>
+                            <li>Supported data recording and reporting for daily classroom activities, contributing to performance insights.</li>
+                            <li>Implemented tracking mechanisms for student activities, generating reports on participation and outcomes.</li>
                         </ul>
                     </div>
                 </div>
-
                 <div class="timeline-item">
-                    <div class="timeline-dot"></div>
+                    <div class="timeline-item-dot"></div>
                     <div class="timeline-item-content">
-                        <h3>Rainbow Special Care Center</h3>
-                        <span class="role">Data Analyst</span>
-                        <span class="duration">Little Rock, Arkansas | 1997 – 1999</span>
+                        <h3>Client Specialist</h3>
+                        <p class="duration">Rainbow Special Care Center, Little Rock, Arkansas | 1997-1999</p>
                         <ul>
-                            <li>Performed in-depth data analysis on client demographics and service engagement, identifying key trends and insights to inform strategic decisions.</li>
-                            <li>Developed interactive dashboards and reports using Tableau and Power BI, visualizing complex datasets for stakeholders and improving data-driven decision-making.</li>
-                            <li>Built and maintained SQL queries and scripts for data extraction, transformation, and loading from various source systems into a centralized data repository.</li>
-                            <li>Assisted in the migration of on-premise databases to AWS Redshift, ensuring data integrity and minimizing downtime.</li>
-                            <li>Collaborated with engineering teams to improve data collection processes and ensure data quality for analytical purposes.</li>
+                            <li>Developed and applied data-driven criteria to determine optimal work placements for 150+ special needs adult clients, improving matching efficiency and success rates.</li>
+                            <li>Managed and ensured the integrity of comprehensive client databases and records, implementing data governance best practices for accurate reporting and analysis.</li>
+                            <li>Established and maintained a systematic process for monthly client-healthcare professional coordination, tracking engagement metrics and outcomes.</li>
+                            <li>Optimized volunteer resource allocation and scheduling through data-informed planning, enhancing operational efficiency.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-item-dot"></div>
+                    <div class="timeline-item-content">
+                        <h3>Teacher’s Assistant</h3>
+                        <p class="duration">Cowell Elementary, Conway, Arkansas | 1996-1997</p>
+                        <ul>
+                            <li>Supported teachers in tracking student progress and managing classroom data for daily activities.</li>
+                            <li>Monitored and documented student participation in daily and special activities, contributing to activity logs and reports.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <div class="education-details">
-                    <h3>University of Arkansas at Little Rock</h3>
-                    <p>Little Rock, AR</p>
-                    <ul>
-                        <li><strong>BS in Computer Science</strong> (1999)</li>
-                        <li><strong>BA in Mathematics</strong> (1998)</li>
-                        <li>GPA (4.0 Scale): Computer Science – 3.8, Mathematics – 3.5, Overall 3.4</li>
-                        <li>Dean’s List, Chancellor’s List</li>
-                    </ul>
+        <section id="projects" class="section">
+            <h2>Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Data Pipeline for Customer Analytics</h3>
+                        <p>Designed and implemented an end-to-end ETL pipeline using AWS S3, Glue, and Redshift to ingest, transform, and load customer interaction data. Enabled real-time analytics for marketing campaigns.</p>
+                        <p class="skills-used">Skills: AWS S3, AWS Glue, AWS Redshift, Python, SQL, Data Modeling</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Real-time IoT Data Processing with Kafka & Spark</h3>
+                        <p>Developed a streaming data solution to process sensor data from IoT devices using Apache Kafka for ingestion and Apache Spark for real-time analytics and anomaly detection. Data stored in Snowflake.</p>
+                        <p class="skills-used">Skills: Apache Kafka, Apache Spark, Scala/Python, Snowflake, Real-time Processing</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-card-content">
+                        <h3>Data Warehouse Modernization with dbt</h3>
+                        <p>Led the transformation of an existing data warehouse schema using dbt to create modular, tested, and documented data models. Improved data quality and reduced reporting latency by 30%.</p>
+                        <p class="skills-used">Skills: dbt, SQL, Data Warehousing, Snowflake/Databricks, Data Governance</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:jwsmith@colostate.edu">jwsmith@colostate.edu</a></p>
-                <p>Location: 2002 Front Range Way Fort Collins, CO 80525</p>
-                <p>GitHub: <a href="https://github.com/mohankrishnaganne" target="_blank">mohankrishnaganne</a></p>
+        <section id="education-contact" class="section">
+            <h2>Education & Contact</h2>
+            <div class="education-contact-grid">
+                <div class="education-item">
+                    <h3>Education</h3>
+                    <p><strong>University of Arkansas at Little Rock</strong></p>
+                    <p>BS in Early Childhood Development (1999)</p>
+                    <p>BA in Elementary Education (1998)</p>
+                    <p>GPA: Early Childhood Development – 3.8, Elementary Education – 3.5, Overall 3.4</p>
+                    <p>Dean’s List, Chancellor’s List</p>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Email: <a href="mailto:[REDACTED_EMAIL]">[REDACTED_EMAIL]</a></p>
+                    <p>Location: [REDACTED_STREET_ADDRESS], CO [REDACTED_ZIP_CODE]</p>
+                    <p>GitHub: <a href="https://github.com/mohankrishnaganne" target="_blank">mohankrishnaganne</a></p>
+                </div>
             </div>
         </section>
     </main>
@@ -520,3 +489,4 @@
 </main>
 </body>
 </html>
+```
