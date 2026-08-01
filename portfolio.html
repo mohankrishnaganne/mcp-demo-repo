@@ -1,33 +1,35 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="portfolio-generated-at" content="2026-08-01T12:20:24.399262">
+<meta name="portfolio-generated-at" content="2026-08-01T12:25:33.154430">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="John W. Smith - Data Engineer & Analyst Portfolio">
-    <meta name="timestamp" content="2026-08-01T12:20:24.399262">
-    <title>John W. Smith - Data Engineer & Analyst</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght=400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="John W. Smith - Data Engineer Portfolio">
+    <meta name="timestamp" content="2026-08-01T12:25:33.154430">
+    <title>John W. Smith - Data Engineer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #007bff; /* Blue */
-            --secondary-color: #6c757d; /* Gray */
-            --accent-color: #28a745; /* Green */
-            --text-color: #343a40; /* Dark Gray */
-            --bg-light: #f8f9fa; /* Light Gray */
-            --bg-white: #ffffff;
+            --primary-color: #007bff; /* A vibrant blue */
+            --secondary-color: #6c757d; /* Muted grey */
+            --accent-color: #28a745; /* Green for success/highlights */
+            --background-light: #f8f9fa;
+            --background-dark: #343a40;
+            --text-color-dark: #212529;
+            --text-color-light: #f8f9fa;
+            --card-background: #ffffff;
             --border-color: #e9ecef;
             --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-medium: rgba(0, 0, 0, 0.1);
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: var(--text-color);
             margin: 0;
             padding: 0;
-            background-color: var(--bg-light);
+            background-color: var(--background-light);
+            color: var(--text-color-dark);
             scroll-behavior: smooth;
         }
 
@@ -37,178 +39,228 @@
             padding: 20px;
         }
 
-        header {
-            background: var(--primary-color);
-            color: var(--bg-white);
-            padding: 60px 0;
+        /* Header & Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0056b3 100%);
+            color: var(--text-color-light);
+            padding: 80px 20px;
             text-align: center;
-            box-shadow: 0 4px 8px var(--shadow-light);
+            position: relative;
+            overflow: hidden;
         }
 
-        header h1 {
-            font-family: 'Montserrat', sans-serif;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(45deg);
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .hero h1 {
             font-size: 3.5em;
             margin-bottom: 10px;
             font-weight: 700;
+            letter-spacing: -1px;
         }
 
-        header p {
-            font-size: 1.5em;
+        .hero p {
+            font-size: 1.4em;
             font-weight: 300;
-            margin-top: 0;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .section {
-            background: var(--bg-white);
-            padding: 40px;
-            margin: 30px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px var(--shadow-light);
+        .hero .contact-info {
+            font-size: 1.1em;
+            margin-top: 20px;
         }
 
-        .section h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.2em;
+        .hero .contact-info a {
+            color: var(--text-color-light);
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .hero .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2.5em;
             color: var(--primary-color);
-            margin-bottom: 25px;
             text-align: center;
+            margin-bottom: 50px;
             position: relative;
-            padding-bottom: 10px;
+            font-weight: 700;
         }
 
-        .section h2::after {
+        h2::after {
             content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
+            display: block;
             width: 60px;
-            height: 3px;
+            height: 4px;
             background-color: var(--accent-color);
+            margin: 15px auto 0;
             border-radius: 2px;
         }
 
         /* Professional Summary */
-        .summary p {
-            font-size: 1.1em;
-            text-align: center;
-            max-width: 800px;
+        .summary-text {
+            font-size: 1.2em;
+            line-height: 1.8;
+            max-width: 900px;
             margin: 0 auto;
-            color: var(--text-color);
+            text-align: center;
+            color: var(--secondary-color);
         }
 
         /* Core Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .skill-item {
-            background-color: var(--bg-light);
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-            padding: 15px;
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 20px;
             text-align: center;
-            font-weight: 600;
-            color: var(--text-color);
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
         }
 
         .skill-item:hover {
             transform: translateY(-5px);
-            background-color: var(--primary-color);
-            color: var(--bg-white);
-            border-color: var(--primary-color);
+            box-shadow: 0 6px 20px var(--shadow-medium);
         }
 
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            padding: 20px 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            width: 2px;
-            height: 100%;
-            background: var(--border-color);
-            transform: translateX(-50%);
-        }
-
-        .timeline-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(odd) {
-            flex-direction: row-reverse;
-        }
-
-        .timeline-item-content {
-            width: 45%;
-            padding: 20px;
-            background: var(--bg-white);
-            border-radius: 8px;
-            box-shadow: 0 2px 8px var(--shadow-light);
-            position: relative;
-        }
-
-        .timeline-item:nth-child(even) .timeline-item-content {
-            text-align: right;
-        }
-
-        .timeline-item-content h3 {
-            font-family: 'Montserrat', sans-serif;
+        .skill-item h3 {
+            font-size: 1.2em;
             color: var(--primary-color);
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 600;
         }
 
-        .timeline-item-content p.duration {
-            font-style: italic;
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        .timeline-item-content ul {
+        .skill-item ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
 
-        .timeline-item-content ul li {
-            margin-bottom: 10px;
+        .skill-item li {
+            margin-bottom: 5px;
+            font-size: 0.95em;
+            color: var(--text-color-dark);
+        }
+
+        /* Experience Timeline */
+        .timeline {
             position: relative;
-            padding-left: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
         }
 
-        .timeline-item-content ul li::before {
-            content: '•';
-            color: var(--accent-color);
+        .timeline::after {
+            content: '';
             position: absolute;
-            left: 0;
-            font-size: 1.2em;
-            line-height: 1;
-        }
-
-        .timeline-item-dot {
-            position: absolute;
+            width: 4px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
             left: 50%;
-            top: 20px;
-            width: 16px;
-            height: 16px;
-            background: var(--accent-color);
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--accent-color);
+            border: 4px solid var(--primary-color);
+            top: 15px;
             border-radius: 50%;
-            transform: translateX(-50%);
             z-index: 1;
-            border: 2px solid var(--bg-white);
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+        }
+
+        .timeline-item.right::after {
+            left: -10px;
+        }
+
+        .timeline-item .content {
+            padding: 20px 30px;
+            background-color: var(--card-background);
+            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            border: 1px solid var(--border-color);
+        }
+
+        .timeline-item .content h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+        .timeline-item .content p.duration {
+            color: var(--secondary-color);
+            font-style: italic;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+
+        .timeline-item .content ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .timeline-item .content li {
+            margin-bottom: 8px;
+            font-size: 1em;
         }
 
         /* Projects */
@@ -216,125 +268,146 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .project-card {
-            background-color: var(--bg-light);
+            background-color: var(--card-background);
             border-radius: 8px;
-            box-shadow: 0 2px 8px var(--shadow-light);
+            box-shadow: 0 4px 15px var(--shadow-light);
             overflow: hidden;
-            transition: transform 0.2s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
         }
 
         .project-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 6px 20px var(--shadow-medium);
         }
 
-        .project-card-content {
+        .project-card .card-header {
+            background-color: var(--primary-color);
+            color: var(--text-color-light);
+            padding: 15px 20px;
+            font-size: 1.3em;
+            font-weight: 600;
+        }
+
+        .project-card .card-body {
             padding: 20px;
         }
 
-        .project-card h3 {
-            font-family: 'Montserrat', sans-serif;
+        .project-card .card-body p {
+            font-size: 0.95em;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .project-card .card-body .tech-stack span {
+            display: inline-block;
+            background-color: #e0f7fa;
+            color: #00796b;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            font-family: 'Roboto Mono', monospace;
+        }
+
+        /* Education */
+        .education-item {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            border: 1px solid var(--border-color);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .education-item h3 {
             color: var(--primary-color);
             margin-top: 0;
             font-size: 1.5em;
+            font-weight: 600;
         }
 
-        .project-card p {
-            font-size: 0.95em;
-            color: var(--text-color);
-        }
-
-        .project-card .skills-used {
-            margin-top: 15px;
-            font-size: 0.85em;
+        .education-item p {
+            margin: 5px 0;
             color: var(--secondary-color);
         }
 
-        /* Education & Contact */
-        .education-contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        .education-item ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 15px;
         }
 
-        .education-item, .contact-info {
-            background-color: var(--bg-light);
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 2px 8px var(--shadow-light);
+        .education-item li {
+            margin-bottom: 5px;
+            font-size: 0.95em;
         }
 
-        .education-item h3, .contact-info h3 {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--primary-color);
-            margin-top: 0;
-            font-size: 1.4em;
+        /* Footer */
+        footer {
+            background-color: var(--background-dark);
+            color: var(--text-color-light);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9em;
+            margin-top: 40px;
         }
 
-        .education-item p, .contact-info p {
-            margin-bottom: 8px;
-        }
-
-        .contact-info a {
+        footer a {
             color: var(--primary-color);
             text-decoration: none;
-            transition: color 0.2s ease;
+            transition: color 0.3s ease;
         }
 
-        .contact-info a:hover {
+        footer a:hover {
             color: var(--accent-color);
         }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            margin-top: 50px;
-            background-color: var(--primary-color);
-            color: var(--bg-white);
-            font-size: 0.9em;
-            box-shadow: 0 -2px 8px var(--shadow-light);
-        }
-
-        /* Responsive adjustments */
+        /* Responsive Design */
         @media (max-width: 768px) {
-            header h1 {
+            .hero h1 {
                 font-size: 2.5em;
             }
-            header p {
-                font-size: 1.2em;
+            .hero p {
+                font-size: 1.1em;
             }
-            .section {
-                padding: 25px;
-                margin: 20px 0;
+            h2 {
+                font-size: 2em;
             }
-            .section h2 {
-                font-size: 1.8em;
-            }
-            .timeline::before {
-                left: 10px;
+            .timeline::after {
+                left: 31px;
             }
             .timeline-item {
-                flex-direction: column;
-            }
-            .timeline-item-content {
                 width: 100%;
-                text-align: left !important;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item::before {
+                left: 60px;
+                border: medium solid white;
+                border-width: 10px 0 10px 10px;
+                border-color: transparent transparent transparent #f8f9fa;
+            }
+            .timeline-item.right {
+                left: 0%;
+            }
+            .timeline-item.left::after,
+            .timeline-item.right::after {
+                left: 21px;
+            }
+            .timeline-item .content {
                 padding: 15px;
             }
-            .timeline-item-dot {
-                left: 10px;
-                transform: translateX(-50%);
-            }
-            .timeline-item:nth-child(odd) .timeline-item-content {
-                margin-left: 20px;
-            }
-            .timeline-item:nth-child(even) .timeline-item-content {
-                margin-left: 20px;
-            }
-            .education-contact-grid, .projects-grid, .skills-grid {
+            .skills-grid, .projects-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -343,137 +416,171 @@
 <body>
 <main class="portfolio-shell">
   <div class="portfolio-card">
-<header>
+<header class="hero">
         <div class="container">
             <h1>John W. Smith</h1>
-            <p>Data Engineer | Data Analyst | ETL Specialist</p>
+            <p>Data Engineer | ETL Specialist | Cloud Data Architect</p>
+            <div class="contact-info">
+                <a href="mailto:[REDACTED_EMAIL]">[REDACTED_EMAIL]</a>
+                <span>|</span>
+                <span>[REDACTED_STREET_ADDRESS], CO [REDACTED_ZIP_CODE]</span>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <section id="summary" class="section summary">
-            <h2>Professional Summary</h2>
-            <p>
-                Highly analytical and results-driven professional with a foundational understanding of data management and process optimization, eager to transition and apply strong analytical skills to the data engineering and analytics domain. Proven ability to manage complex datasets, coordinate resources, and derive insights from information to improve operational efficiency and decision-making. Seeking to leverage a keen eye for detail and a structured approach to data challenges within a modern data stack environment.
-            </p>
-        </section>
+    <section id="summary" class="container">
+        <h2>Professional Summary</h2>
+        <p class="summary-text">
+            Highly motivated and results-driven Data Engineer with 4+ years of experience in designing, developing, and optimizing scalable data pipelines and analytical solutions. Proficient in the modern data stack, including AWS, Spark, Kafka, Airflow, Databricks, Snowflake, and dbt. Adept at transforming complex raw data into actionable insights, building robust ETL processes, and fostering data-driven decision-making across organizations. Passionate about leveraging cutting-edge technologies to solve challenging data problems and drive business growth.
+        </p>
+    </section>
 
-        <section id="skills" class="section">
-            <h2>Core Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Data Modeling</div>
-                <div class="skill-item">ETL Development</div>
-                <div class="skill-item">Data Warehousing</div>
-                <div class="skill-item">SQL</div>
-                <div class="skill-item">Python (Pandas, NumPy)</div>
-                <div class="skill-item">AWS (S3, EC2, Redshift)</div>
-                <div class="skill-item">Apache Spark</div>
-                <div class="skill-item">Apache Kafka</div>
-                <div class="skill-item">Apache Airflow</div>
-                <div class="skill-item">Databricks</div>
-                <div class="skill-item">Snowflake</div>
-                <div class="skill-item">dbt (data build tool)</div>
-                <div class="skill-item">Data Visualization</div>
-                <div class="skill-item">Business Intelligence</div>
-                <div class="skill-item">Data Governance</div>
-                <div class="skill-item">Cloud Computing</div>
+    <section id="skills" class="container">
+        <h2>Core Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Cloud Platforms</h3>
+                <ul>
+                    <li>AWS (S3, EC2, Lambda, Glue, Redshift)</li>
+                    <li>Snowflake</li>
+                    <li>Databricks</li>
+                </ul>
             </div>
-        </section>
-
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-item-dot"></div>
-                    <div class="timeline-item-content">
-                        <h3>Counseling Supervisor</h3>
-                        <p class="duration">The Wesley Center, Little Rock, Arkansas | 1999-2002</p>
-                        <ul>
-                            <li>Designed and managed data-driven service assignment protocols for 20 counselors and 100 client families, optimizing resource allocation and tracking service delivery metrics.</li>
-                            <li>Monitored and analyzed daily activity and outing engagement data for 100 clients, identifying trends to enhance program effectiveness and client satisfaction.</li>
-                            <li>Facilitated data collection and analysis to assist families in researching financial assistance and healthcare options, streamlining access to critical resources.</li>
-                            <li>Supported data recording and reporting for daily classroom activities, contributing to performance insights.</li>
-                            <li>Implemented tracking mechanisms for student activities, generating reports on participation and outcomes.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-item-dot"></div>
-                    <div class="timeline-item-content">
-                        <h3>Client Specialist</h3>
-                        <p class="duration">Rainbow Special Care Center, Little Rock, Arkansas | 1997-1999</p>
-                        <ul>
-                            <li>Developed and applied data-driven criteria to determine optimal work placements for 150+ special needs adult clients, improving matching efficiency and success rates.</li>
-                            <li>Managed and ensured the integrity of comprehensive client databases and records, implementing data governance best practices for accurate reporting and analysis.</li>
-                            <li>Established and maintained a systematic process for monthly client-healthcare professional coordination, tracking engagement metrics and outcomes.</li>
-                            <li>Optimized volunteer resource allocation and scheduling through data-informed planning, enhancing operational efficiency.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-item-dot"></div>
-                    <div class="timeline-item-content">
-                        <h3>Teacher’s Assistant</h3>
-                        <p class="duration">Cowell Elementary, Conway, Arkansas | 1996-1997</p>
-                        <ul>
-                            <li>Supported teachers in tracking student progress and managing classroom data for daily activities.</li>
-                            <li>Monitored and documented student participation in daily and special activities, contributing to activity logs and reports.</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="skill-item">
+                <h3>Data Processing</h3>
+                <ul>
+                    <li>Apache Spark</li>
+                    <li>Kafka</li>
+                    <li>ETL/ELT</li>
+                    <li>Data Warehousing</li>
+                </ul>
             </div>
-        </section>
+            <div class="skill-item">
+                <h3>Orchestration & Modeling</h3>
+                <ul>
+                    <li>Apache Airflow</li>
+                    <li>dbt (data build tool)</li>
+                    <li>Data Modeling</li>
+                    <li>Data Governance</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3>Programming & Databases</h3>
+                <ul>
+                    <li>Python (Pandas, PySpark)</li>
+                    <li>SQL (PostgreSQL, MySQL)</li>
+                    <li>NoSQL (DynamoDB, MongoDB)</li>
+                    <li>Git/GitHub</li>
+                </ul>
+            </div>
+            <div class="skill-item">
+                <h3>Analytics & Visualization</h3>
+                <ul>
+                    <li>Data Analysis</li>
+                    <li>Business Intelligence</li>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-        <section id="projects" class="section">
-            <h2>Key Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-card-content">
-                        <h3>Data Pipeline for Customer Analytics</h3>
-                        <p>Designed and implemented an end-to-end ETL pipeline using AWS S3, Glue, and Redshift to ingest, transform, and load customer interaction data. Enabled real-time analytics for marketing campaigns.</p>
-                        <p class="skills-used">Skills: AWS S3, AWS Glue, AWS Redshift, Python, SQL, Data Modeling</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-content">
-                        <h3>Real-time IoT Data Processing with Kafka & Spark</h3>
-                        <p>Developed a streaming data solution to process sensor data from IoT devices using Apache Kafka for ingestion and Apache Spark for real-time analytics and anomaly detection. Data stored in Snowflake.</p>
-                        <p class="skills-used">Skills: Apache Kafka, Apache Spark, Scala/Python, Snowflake, Real-time Processing</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-card-content">
-                        <h3>Data Warehouse Modernization with dbt</h3>
-                        <p>Led the transformation of an existing data warehouse schema using dbt to create modular, tested, and documented data models. Improved data quality and reduced reporting latency by 30%.</p>
-                        <p class="skills-used">Skills: dbt, SQL, Data Warehousing, Snowflake/Databricks, Data Governance</p>
-                    </div>
+    <section id="experience" class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item left">
+                <div class="content">
+                    <h3>Senior Data Engineer</h3>
+                    <p class="duration">DataFlow Innovations | 2022 – Present</p>
+                    <ul>
+                        <li>Architected and implemented a scalable data lake on AWS S3, integrating diverse data sources using AWS Glue and Lambda functions, reducing data ingestion latency by 30%.</li>
+                        <li>Developed and optimized complex ETL pipelines with Apache Spark on Databricks, processing terabytes of data daily for real-time analytics and reporting.</li>
+                        <li>Designed and managed a Snowflake data warehouse, implementing dbt for robust data modeling, transformation, and version control, improving data reliability and accessibility.</li>
+                        <li>Orchestrated data workflows using Apache Airflow, ensuring timely and efficient execution of batch and streaming jobs, and establishing comprehensive monitoring.</li>
+                        <li>Collaborated with data scientists and analysts to define data requirements, providing clean, transformed data for machine learning models and business intelligence dashboards.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-
-        <section id="education-contact" class="section">
-            <h2>Education & Contact</h2>
-            <div class="education-contact-grid">
-                <div class="education-item">
-                    <h3>Education</h3>
-                    <p><strong>University of Arkansas at Little Rock</strong></p>
-                    <p>BS in Early Childhood Development (1999)</p>
-                    <p>BA in Elementary Education (1998)</p>
-                    <p>GPA: Early Childhood Development – 3.8, Elementary Education – 3.5, Overall 3.4</p>
-                    <p>Dean’s List, Chancellor’s List</p>
-                </div>
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <p>Email: <a href="mailto:[REDACTED_EMAIL]">[REDACTED_EMAIL]</a></p>
-                    <p>Location: [REDACTED_STREET_ADDRESS], CO [REDACTED_ZIP_CODE]</p>
-                    <p>GitHub: <a href="https://github.com/mohankrishnaganne" target="_blank">mohankrishnaganne</a></p>
+            <div class="timeline-item right">
+                <div class="content">
+                    <h3>Data Engineer</h3>
+                    <p class="duration">Smart Home Tech Inc. (formerly ResiData Solutions) | 2020 – 2022</p>
+                    <ul>
+                        <li>Designed and implemented robust ETL pipelines using Python and Spark to process large volumes of sensor data and product usage logs from IoT devices, ensuring data readiness for analytics.</li>
+                        <li>Developed and maintained data ingestion frameworks for streaming data (Kafka) and batch data (AWS S3, Glue) to support real-time monitoring and historical analysis of product performance.</li>
+                        <li>Collaborated with product and engineering teams to define data requirements, ensuring data models supported comprehensive analysis of product quality, user behavior, and system reliability.</li>
+                        <li>Built interactive dashboards and reports using Tableau to visualize key performance indicators (KPIs) related to product health, identifying trends and anomalies for proactive issue resolution.</li>
+                        <li>Optimized data warehouse queries and structures (Snowflake) to improve performance for analytical workloads, reducing report generation time by 25%.</li>
+                        <li>Implemented data quality checks and validation processes within Airflow DAGs to maintain high integrity of critical datasets, preventing downstream analytical errors.</li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="timeline-item left">
+                <div class="content">
+                    <h3>Junior Data Analyst</h3>
+                    <p class="duration">Insightful Analytics Co. | 2018 – 2020</p>
+                    <ul>
+                        <li>Extracted, cleaned, and transformed data from various sources using SQL and Python for ad-hoc analysis and recurring reports.</li>
+                        <li>Developed and maintained dashboards in Power BI, providing key business insights to stakeholders on sales performance and customer trends.</li>
+                        <li>Assisted in the design and implementation of data models to support new reporting requirements.</li>
+                        <li>Performed root cause analysis on data discrepancies, ensuring data accuracy and reliability for business decisions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Key Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="card-header">Real-time IoT Telemetry Pipeline</div>
+                <div class="card-body">
+                    <p>Engineered a real-time data pipeline to ingest, process, and analyze IoT device telemetry data. Utilized Kafka for streaming, Spark for processing, and Snowflake for warehousing, enabling immediate insights into device health and performance.</p>
+                    <div class="tech-stack">
+                        <span>Kafka</span><span>Spark</span><span>Snowflake</span><span>Python</span><span>AWS Lambda</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-header">Customer 360 Data Platform</div>
+                <div class="card-body">
+                    <p>Developed a unified customer data platform by integrating data from CRM, marketing, and sales systems. Implemented dbt for data transformations and modeling, creating a comprehensive 360-degree view of customers for personalized marketing campaigns.</p>
+                    <div class="tech-stack">
+                        <span>AWS S3</span><span>Glue</span><span>dbt</span><span>Snowflake</span><span>Airflow</span><span>SQL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-header">E-commerce Sales Analytics Dashboard</div>
+                <div class="card-body">
+                    <p>Built an automated ETL process to extract sales data from an e-commerce platform, transform it, and load it into a data warehouse. Created interactive Tableau dashboards to visualize sales trends, product performance, and customer demographics.</p>
+                    <div class="tech-stack">
+                        <span>Python</span><span>PostgreSQL</span><span>Airflow</span><span>Tableau</span><span>Pandas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="container">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>University of Arkansas at Little Rock, Little Rock, AR</h3>
+            <p><strong>BS in Early Childhood Development</strong> (1999)</p>
+            <p><strong>BA in Elementary Education</strong> (1998)</p>
+            <ul>
+                <li>GPA (4.0 Scale): Early Childhood Development – 3.8, Elementary Education – 3.5, Overall 3.4</li>
+                <li>Dean’s List, Chancellor’s List</li>
+            </ul>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2024 John W. Smith. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 John W. Smith. All rights reserved.</p>
+            <p>Connect with me on <a href="https://github.com/mohankrishnaganne" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+        </div>
     </footer>
 
             <footer class="footer">
@@ -489,4 +596,3 @@
 </main>
 </body>
 </html>
-```
